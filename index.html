@@ -4,7 +4,7 @@
 <style>
 :root{--bg:#FBF5E6;--cd:#FFFDF6;--tx:#23302B;--mu:#7C8579;--ac:#1E9E78;--ac2:#D8B25A;--ln:#EADFC6;--dg:#C0392B}
 :root.n{--bg:#0E1815;--cd:#15241F;--tx:#F4ECD8;--mu:#9DB0A5;--ac:#2FBF8C;--ac2:#E3C16F;--ln:#243A32}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:Vazirmatn,Tahoma,system-ui,sans-serif;direction:rtl;font-size:var(--fs,16px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:Vazirmatn,Tahoma,system-ui,sans-serif;direction:rtl}
 button,.b,select,input{font:inherit;color:inherit}
 button,.b{background:transparent;border:1px solid var(--ln);border-radius:10px;padding:6px 10px;cursor:pointer;min-height:36px;display:inline-flex;align-items:center}
 .p{background:linear-gradient(135deg,#1E9E78,#0E7C5A);color:#fff;border-color:transparent}
@@ -20,7 +20,7 @@ nav button{flex:1;border:0;border-radius:0;justify-content:center;min-height:50p
 .rh{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px}.rh b{color:var(--ac)}.rtl{flex:1;min-width:140px}
 .it{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:8px;border:1px solid var(--ln);border-radius:12px;margin:6px 0;transition:.3s}
 .it.fl,.card.fl{box-shadow:0 0 0 3px var(--ac2)}
-.tg{background:#1E9E78;color:#fff;border-radius:8px;padding:2px 8px;font-size:.75em;white-space:nowrap}.pv{flex:1;min-width:120px;color:var(--mu);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tg{background:#1E9E78;color:#fff;border-radius:8px;padding:2px 8px;font-size:12px;white-space:nowrap}.pv{flex:1;min-width:120px;color:var(--mu);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .acts{display:flex;gap:4px;flex-wrap:wrap}.acts button{padding:2px 8px;min-height:32px}
 .em{text-align:center;color:var(--mu);padding:50px 10px}
 #md{position:fixed;inset:0;z-index:20;background:#000a;display:flex;align-items:flex-end;justify-content:center}#md[hidden]{display:none}
@@ -28,7 +28,7 @@ nav button{flex:1;border:0;border-radius:0;justify-content:center;min-height:50p
 .box h3{margin:0 0 8px}.box label,.box small{display:block;margin:8px 0 4px;color:var(--mu)}
 .tb{position:sticky;top:-14px;z-index:2;background:var(--cd);display:flex;flex-wrap:wrap;gap:4px;padding:6px 0}.tb button{padding:2px 8px;min-height:32px}
 .sym{display:flex;flex-wrap:wrap;gap:3px;border:1px solid var(--ln);border-radius:10px;padding:6px;margin-bottom:6px}.sym[hidden]{display:none}.sym button{min-width:34px;justify-content:center;padding:2px;min-height:34px}
-.ed{min-height:90px;border:1px solid var(--ln);border-radius:10px;padding:8px;font-family:'B Nazanin','Vazirmatn',Tahoma;font-size:1.0625em;line-height:1.8;background:var(--bg);outline:none}.ed:focus{border-color:var(--ac)}
+.ed{min-height:90px;border:1px solid var(--ln);border-radius:10px;padding:8px;font-family:'B Nazanin','Vazirmatn',Tahoma;font-size:17px;line-height:1.8;background:var(--bg);outline:none}.ed:focus{border-color:var(--ac)}
 .ed:empty:before{content:attr(data-ph);color:var(--mu)}
 .orow{display:flex;gap:6px;align-items:center;margin:4px 0}.orow input[type=text],.orow .oi,.orow .ia,.orow .ib{flex:1}
 .ft{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;position:sticky;bottom:-14px;background:var(--cd);padding:8px 0}
@@ -43,24 +43,32 @@ nav button{flex:1;border:0;border-radius:0;justify-content:center;min-height:50p
 .ot,.mt{width:100%;border-collapse:collapse;table-layout:fixed}.ot td{vertical-align:top;padding:1px 4px}
 .mt td:nth-child(1){width:42%}.mt td:nth-child(2){width:14%;text-align:center}.mt td:nth-child(3){width:44%}.mt td{vertical-align:top;padding:2px 4px}
 .ln{height:calc(1em*var(--ls,1.7))}.bl.a{font-weight:700;text-decoration:underline}
-.et{width:100%;border-collapse:collapse;table-layout:fixed}.et>thead>tr>th,.et>tbody>tr>td{border:1px solid #000;padding:4px 8px;vertical-align:top}.et>thead>tr>th{background:#e8e8e8;text-align:center}.et>thead>tr>th:nth-child(1),.et>tbody>tr>td:nth-child(1){width:9%;text-align:center}.et>thead>tr>th:nth-child(3),.et>tbody>tr>td:nth-child(3){width:12%;text-align:center}.et>tbody>tr{break-inside:avoid}.et.nr>thead{display:table-row-group}
+.et{width:100%;border-collapse:collapse;table-layout:fixed}.et>thead>tr>th,.et>tbody>tr>td{border:1px solid #000;padding:4px 8px;vertical-align:top}.et>thead>tr>th{background:#e8e8e8;text-align:center}.et td.c{text-align:center}.et>tbody>tr{break-inside:avoid}.et.nr>thead{display:table-row-group}
 .sum{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:6px 12px;margin-bottom:10px;color:var(--ac);font-weight:700}
-.row{display:flex;flex-wrap:wrap;gap:6px}nav button{font-size:.8125em;padding:6px 2px}
+.row{display:flex;flex-wrap:wrap;gap:6px}nav button{font-size:13px;padding:6px 2px}
 .ch{display:inline-flex;gap:4px;align-items:center;margin:2px 6px;cursor:pointer}
 .bi{border:0;border-bottom:2px dotted var(--ac);background:transparent;min-width:90px;text-align:center;font:inherit;border-radius:0;padding:2px 4px}
 .da{width:100%;margin-top:6px;border:1px solid var(--ln);border-radius:10px;background:var(--bg);color:inherit;padding:8px;font:inherit}
-.qc{font-family:'B Nazanin','Vazirmatn',Tahoma;font-size:1.125em;line-height:1.9}.qc img{max-width:100%;height:auto}.si{margin:6px 0}
+.qc{font-family:'B Nazanin','Vazirmatn',Tahoma;font-size:18px;line-height:1.9}.qc img{max-width:100%;height:auto}.si{margin:6px 0}
 #st img{max-width:100%;height:auto}
 .kt{width:100%;border-collapse:collapse;margin-top:8px}.kt th,.kt td{border:1px solid #000;padding:3px 8px;text-align:center}.kt th{background:#e8e8e8}
 .bg{columns:2;column-gap:24px}.be{break-inside:avoid;margin:0 0 6px;white-space:nowrap}.bub{display:inline-block;width:1.5em;height:1.5em;line-height:1.35em;border:1.5px solid #000;border-radius:50%;text-align:center;font-size:.8em;margin:0 3px}
+#app,#md .box{zoom:var(--z,1)}
 #pp{display:none}#pp .paper{width:auto;padding:0}
 @media print{.ui{display:none!important}#pp{display:block}@page{size:A4;margin:15mm}body{background:#fff}}
-.ag{border-collapse:collapse;width:100%}.ag th,.ag td{border:1px solid var(--ln);padding:4px 8px;text-align:center;white-space:nowrap}.ag th{position:sticky;top:0;background:var(--cd);z-index:1}.ag td:nth-child(2){text-align:right}.ag tfoot td{font-weight:700;background:var(--bg)}
+#top{position:sticky;top:0;z-index:5}#top header{position:static}
+#tabs{display:flex;gap:6px;overflow-x:auto;padding:6px 10px;background:var(--cd);border-bottom:1px solid var(--ln);scrollbar-width:none}
+#tabs .tab{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--ln);border-radius:10px;padding:4px 10px;white-space:nowrap;cursor:pointer;max-width:190px;color:var(--mu)}
+#tabs .tab .tt{overflow:hidden;text-overflow:ellipsis}#tabs .tab.on{border-color:var(--ac);color:var(--tx);font-weight:700;box-shadow:inset 0 -3px var(--ac)}#tabs .tx{padding:0 4px;opacity:.6}.tab-add{min-height:30px;padding:2px 12px}
+.ht{width:100%;border-collapse:collapse;table-layout:fixed;margin-bottom:6px}.ht td{padding:3px 6px;vertical-align:middle;overflow-wrap:anywhere}.ht.b td{border:1px solid #000}
+.paper .bm{float:left;margin-right:10px;font-weight:700;font-size:.9em;white-space:nowrap}
+.hdp{width:auto!important;padding:6px!important;margin:8px 0;border-radius:10px}.hdp td{cursor:pointer}.hdp td.sel{outline:3px solid var(--ac2);outline-offset:-3px;background:#fff7dc}.hdp .ht:not(.b) td{border:1px dashed #aaa}
+.rhl{display:inline-flex;align-items:center;gap:4px;color:var(--mu);font-size:12px}
 #cr{position:fixed;right:1px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-size:11px;color:var(--tx);opacity:.45;pointer-events:none;user-select:none;-webkit-user-select:none;z-index:1;white-space:nowrap;font-family:Vazirmatn,Tahoma,sans-serif}
 </style></head><body>
 <div id="cr" class="ui">تهیه‌کننده: وحیده محجوب</div>
 <div class="ui" id="app">
-<header><button id="mnu">☰</button><input id="ttl" placeholder="عنوان آزمون"><button id="ub" style="display:none" title="برگردان آخرین حذف">↶</button><button id="th">◐</button></header>
+<div id="top"><header><button id="mnu">☰</button><input id="ttl" placeholder="عنوان آزمون"><button id="ub" style="display:none" title="برگردان آخرین حذف">↶</button><button id="th">◐</button></header><div id="tabs"></div></div>
 <main id="v"></main>
 <div id="jmp"><button id="up" title="اول صفحه">⤒</button><button id="dn" title="آخر صفحه">⤓</button></div>
 <button class="p fab" id="add">＋ سؤال</button>
@@ -82,17 +90,13 @@ const toast=t=>{const e=$('#ts');e.textContent=t;e.style.opacity=1;clearTimeout(
 // ---------- storage (IndexedDB: large, device-quota based)
 const idb=()=>new Promise((res,rej)=>{const r=indexedDB.open('azmoon_online',2);r.onupgradeneeded=()=>{['exams','bank','results','draft'].forEach(n=>r.result.objectStoreNames.contains(n)||r.result.createObjectStore(n,{keyPath:'id'}))};r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});
 const tx=(s,m,f)=>new Promise((res,rej)=>{const t=db.transaction(s,m),q=f(t.objectStore(s));t.oncomplete=()=>res(q?.result);t.onerror=()=>rej(t.error)});
-const put0=(s,v)=>tx(s,'readwrite',o=>o.put(v)),all=s=>tx(s,'readonly',o=>o.getAll()),del0=(s,k)=>tx(s,'readwrite',o=>o.delete(k));
-// question-bank records carry a last-modified time (m); deleting one leaves a small tombstone so the deletion can sync to other devices
-const bkTb=()=>{try{return JSON.parse(localStorage.ao_bktomb||'{}')}catch(e){return{}}},bkTbSet=o=>localStorage.ao_bktomb=JSON.stringify(o);
-const put=(s,v,keep)=>{if(s=='bank'&&v){if(!keep){v.m=Date.now();syncSoon()}const t=bkTb();if(t[v.id]){delete t[v.id];bkTbSet(t)}}return put0(s,v)};
-const del=(s,k)=>{if(s=='bank'){const t=bkTb();t[k]=Date.now();bkTbSet(t);syncSoon()}return del0(s,k)};
-const persist=()=>{clearTimeout(pt);pt=setTimeout(()=>{ex.rows.forEach(r=>r.score=rowTotal(r));ex.t=Date.now();put('exams',ex);syncSoon()},300)};
+const put=(s,v)=>tx(s,'readwrite',o=>o.put(v)),all=s=>tx(s,'readonly',o=>o.getAll()),del=(s,k)=>tx(s,'readwrite',o=>o.delete(k));
+const persist=()=>{clearTimeout(pt);const e0=ex;pt=setTimeout(()=>{e0.rows.forEach(r=>r.score=rowTotal(r));e0.t=Date.now();put('exams',e0);syncSoon()},300)};
 function newExam(){ex={id:uid(),title:'آزمون جدید',rows:[],t:Date.now()};exams.push(ex);localStorage.ao_cur=ex.id;put('exams',ex);syncSoon();T='ex';render()}
 const saveBlob=(b,n)=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=n;a.style.display='none';document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(a.href)},8000)};
 // ---------- helpers
 const strip=h=>{const d=document.createElement('div');d.innerHTML=h||'';return d.textContent};
-const R_DOTS=()=>/\.{3,}|…{2,}/g,nzb=x=>String(x==null?'':x).replace(/[\u200c\u200f\u200e\s]/g,'').replace(/ي/g,'ی').replace(/ك/g,'ک').toLowerCase(),LSV=()=>+ex.ls||1.7,CPV=()=>ex.cp!=null?+ex.cp:4;
+const R_DOTS=()=>/\.{3,}|…{2,}/g,nzb=x=>String(x==null?'':x).replace(/[\u200c\u200f\u200e\s]/g,'').replace(/ي/g,'ی').replace(/ك/g,'ک').toLowerCase(),LSV=()=>+ex.ls||1.7,CPV=()=>ex.cp!=null?+ex.cp:4,FS=()=>ex.fs!=null?+ex.fs:14;
 function legacy(it){if(it.type=='blank'&&!it.blanks){const a=[];it.html=(it.html||'').replace(/\[\[(.*?)\]\]/g,(m,x)=>{a.push(strip(x));return'……………'});it.blanks=a}
  if(it.type=='paren'&&it.opts&&it.ans==null){const o='( '+it.opts.join(' - ')+' )';it.html=(it.html||'').includes('{{}}')?it.html.replace('{{}}',o):(it.html||'')+' '+o;it.ans=it.opts[it.ok]||'';delete it.opts;delete it.ok}return it}
 const migr=e=>(e.rows||[]).forEach(r=>{r.items.forEach(legacy);if(+r.score&&r.items.every(i=>!i.score)){const n=r.items.length,q=+(r.score/n).toFixed(2);r.items.forEach((i,k)=>i.score=k?q:+(r.score-q*(n-1)).toFixed(2))}});
@@ -120,16 +124,16 @@ function cellHtml(r,a){const s=r.items,t=r.title?`<div>${esc(r.title)}</div>`:''
 function paperHtml(a){return(ex.vl?`<div style="text-align:center;font-weight:700;margin-bottom:6px">نسخه‌ی ${ex.vl}</div>`:'')+`<table class="et${ex.hdr===false?' nr':''}"><thead><tr><th>ردیف</th><th>سوالات</th><th>بارم</th></tr></thead><tbody>${ex.rows.map((r,i)=>`<tr><td>${fa(i+1)}</td><td data-q style="padding:4px ${CPV()}mm">${cellHtml(r,a)}</td><td>${rowTotal(r)?sf(rowTotal(r)):''}</td></tr>`).join('')}</tbody></table>`}
 // ---------- main views
 function find(id){for(let ri=0;ri<ex.rows.length;ri++){const r=ex.rows[ri],ii=r.items.findIndex(x=>x.id==id);if(ii>=0)return{r,ri,ii,it:r.items[ii]}}}
-function render(){$('#ttl').value=ex.title;$$('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t==T));$('#add').style.display=T=='ex'?'':'none';
+function render(){tabsDraw();$('#ttl').value=ex.title;$$('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t==T));$('#add').style.display=T=='ex'?'':'none';
  $('#v').innerHTML=(T=='ex'?bkBanner():'')+(T=='ex'?vEx():T=='bk'?vBk():T=='ol'?vOl():T=='rs'?vRs():vOut());if(T=='bk'){bkChips();bkList()}if(T=='out')fitPv();if(T=='rs')rsDraw()}
 function vEx(){if(!ex.rows.length)return'<div class="em">هنوز سؤالی نیست.<br>دکمه‌ی «＋ سؤال» را بزن.</div>';
  return `<div class="sum" id="sum">جمع بارم: ${sf(total())} <button data-a="chk" style="margin-inline-start:10px">🔎 بررسی</button></div>`+ex.rows.map((r,ri)=>`<section class="card" id="r_${r.id}"><div class="rh"><b>سوال ${fa(ri+1)}</b><input class="rtl" data-r="${r.id}" value="${esc(r.title)}" placeholder="دستور سؤال (اختیاری) مثلاً: جاهای خالی را پر کنید">
- <span class="tg" style="background:var(--ac2);color:#2b1a00">جمع بارم: ${sf(rowTotal(r))}</span><span class="acts"><button data-a="rup" data-r="${r.id}">↑</button><button data-a="rdn" data-r="${r.id}">↓</button>${ri?`<button data-a="mrg" data-r="${r.id}" title="ادغام با ردیف قبل">⇡ ادغام</button>`:''}<button data-a="rdel" data-r="${r.id}">🗑</button></span></div>
+ <span class="tg" style="background:var(--ac2);color:#2b1a00">جمع بارم: ${sf(rowTotal(r))}</span>${rhIn(r)}<span class="acts"><button data-a="rup" data-r="${r.id}">↑</button><button data-a="rdn" data-r="${r.id}">↓</button>${ri?`<button data-a="mrg" data-r="${r.id}" title="ادغام با ردیف قبل">⇡ ادغام</button>`:''}<button data-a="rcp" data-r="${r.id}" title="کپی این سؤال به آزمون دیگر">⧉</button><button data-a="rdel" data-r="${r.id}">🗑</button></span></div>
  ${r.items.map((it,ii)=>`<div class="it" id="i_${it.id}"><span class="tg">${r.items.length>1?lt(ii)+') ':''}${TN[it.type]}</span>${it.score?`<span class="tg" style="background:var(--ac2);color:#2b1a00">بارم ${sf(it.score)}</span>`:''}<span class="pv">${esc(strip(it.html).slice(0,90))||'(بدون متن)'}</span>
  <span class="acts"><button data-a="ied" data-i="${it.id}">✎</button><button data-a="iup" data-i="${it.id}">↑</button><button data-a="idn" data-i="${it.id}">↓</button>${r.items.length>1?`<button data-a="iout" data-i="${it.id}" title="خروج از ردیف">⤴ خروج</button>`:''}<button data-a="ibk" data-i="${it.id}" title="ذخیره در بانک">📥</button><button data-a="idel" data-i="${it.id}">🗑</button></span></div>`).join('')}
  <button data-a="addin" data-r="${r.id}">＋ سؤال در همین ردیف</button></section>`).join('')}
 let SUBS=[],SC=null;try{SUBS=JSON.parse(localStorage.ao_subs||'[]')}catch{}
-const saveSubs=()=>{localStorage.ao_subs=JSON.stringify(SUBS);localStorage.ao_subst=Date.now();syncSoon()},addSub=n=>{if(!SUBS.includes(n)){SUBS.push(n);saveSubs()}},subjects=()=>[...new Set([...SUBS,...bank.map(b=>b.subj).filter(Boolean)])];
+const saveSubs=()=>{localStorage.ao_subs=JSON.stringify(SUBS);localStorage.ao_subt=Date.now();if(typeof syncSoon=='function')syncSoon()},addSub=n=>{if(!SUBS.includes(n)){SUBS.push(n);saveSubs()}},subjects=()=>[...new Set([...SUBS,...bank.map(b=>b.subj).filter(Boolean)])];
 function chooseSubj(cb){SC=cb;showM(`<h3>درس را انتخاب کن</h3><div class="r">${subjects().map((x,i)=>`<button class="p" data-x="bs" data-n="${i}">${esc(x)}</button>`).join('')}<button data-x="bs" data-n="-1">بدون درس</button></div><div class="orow"><input id="ns" placeholder="درس جدید (مثلاً ریاضی)"><button class="p" data-x="bsn">＋ ایجاد و انتخاب</button></div><button data-x="cl">انصراف</button>`)}
 function bkChips(){const n=v=>bank.filter(b=>v==''?1:v=='_none'?!b.subj:b.subj==v).length,c=(v,t)=>`<button data-a="bsel" data-i="${esc(v)}" class="${BK.s==v?'p':''}">${esc(t)} (${fa(n(v))})</button>`;
  $('#bc').innerHTML=c('','همه')+subjects().map(x=>c(x,x)).join('')+c('_none','بدون درس')+'<button data-a="bnew">＋ درس جدید</button><button data-a="bpaste">📋 چسباندن گروهی</button><button data-a="bgen">🎲 ساخت آزمون از بانک</button>'+(BK.s&&BK.s!='_none'?'<button data-a="bren">✎ نام درس</button><button data-a="bdsub">🗑 حذف درس</button>':'')}
@@ -138,7 +142,7 @@ const scOpts=r=>'<option value="0">بارم؟</option>'+Array.from({length:80},(
 const vBk=()=>`<div class="r" id="bc"></div><div class="r"><input id="bq" placeholder="جست‌وجو در بانک…" style="flex:1" value="${esc(BK.q)}"><select id="bt"><option value="">همه‌ی انواع</option>${Object.entries(TN).map(([k,v])=>`<option value="${k}" ${BK.ty==k?'selected':''}>${v}</option>`).join('')}</select></div><div id="bl"></div>`;
 function bkList(){const l=bank.filter(b=>(!BK.ty||b.item.type==BK.ty)&&(BK.s==''||(BK.s=='_none'?!b.subj:b.subj==BK.s))&&(!BK.q||strip(b.item.html).includes(BK.q))).sort((a,b)=>b.t-a.t);
  $('#bl').innerHTML=l.length?l.map(b=>`<div class="it"><span class="tg">${TN[b.item.type]}</span>${b.subj?`<span class="tg" style="background:var(--ac2);color:#2b1a00">${esc(b.subj)}</span>`:''}<span class="pv">${esc(strip(b.item.html).slice(0,90))}</span><span class="acts"><button class="p" data-a="bad" data-i="${b.id}">＋ به آزمون</button><button data-a="bsub" data-i="${b.id}" title="تغییر درس">🏷</button><button data-a="bed" data-i="${b.id}">✎</button><button data-a="bdel" data-i="${b.id}">🗑</button></span></div>`).join(''):`<div class="em">بانک خالی است (${fa(bank.length)} سؤال).<br>در تب آزمون روی 📥 بزن.</div>`}
-const vOut=()=>`<div class="card"><h3>بررسی و ابزارهای کمکی</h3><div class="r"><button class="p" data-a="chk">🔎 بررسی آزمون و تنظیم بارم</button></div><div class="r"><button data-a="keypdf">🗝 کلید پاسخ (PDF)</button><button data-a="keydoc">🗝 کلید پاسخ (Word)</button><button data-a="bubble">⭕ پاسخ‌برگ دانش‌آموز (PDF)</button></div></div><div class="card"><div class="r"><button class="p" data-a="pdf0">PDF بدون پاسخ</button><button class="p" data-a="pdf1">PDF با پاسخ</button></div><div class="r"><button class="p" data-a="doc0">Word بدون پاسخ</button><button class="p" data-a="doc1">Word با پاسخ</button></div><div class="r"><button data-a="json">ذخیره‌ی JSON این آزمون</button><button data-a="pv0" class="${AN?'':'p'}">پیش‌نمایش: بدون پاسخ</button><button data-a="pv1" class="${AN?'p':''}">با پاسخ</button></div><small style="color:var(--mu)">PDF: در پنجره‌ی چاپ «ذخیره به‌صورت PDF» را انتخاب کن.</small><div class="r"><label><input type="checkbox" id="hdr" ${ex.hdr===false?'':'checked'}> تکرار سطر عنوان جدول (ردیف / سوالات / بارم) و سربرگ در همه‌ی صفحات</label></div><small style="color:var(--mu)">اگر خاموش باشد، عنوان ستون‌ها و سربرگی که در Word بالای آن اضافه می‌کنی فقط در صفحه‌ی اول می‌ماند.</small><div class="r" style="align-items:center"><label>نسخه:</label><select id="vsel">${[['','اصلی'],['الف','الف'],['ب','ب'],['ج','ج'],['د','د']].map(([v,t])=>`<option value="${v}" ${VAR==v?'selected':''}>${t}</option>`).join('')}</select><label><input type="checkbox" id="vopt" ${VOPT?'checked':''}> ترتیب گزینه‌های چهارگزینه‌ای هم عوض شود</label></div><div class="r" style="align-items:center"><label for="pns">شماره‌ی صفحه (پایین برگه):</label><select id="pns">${[['','ندارد'],['n','فقط شماره'],['nt','صفحه ۱ از ۳']].map(([v,t])=>`<option value="${v}" ${(ex.pn||'')==v?'selected':''}>${t}</option>`).join('')}</select></div><div class="r" style="align-items:center"><label for="cpr">فاصله‌ی نوشته‌ها از خط جدول:</label><input type="range" id="cpr" min="0" max="15" step="1" value="${CPV()}" style="flex:1;accent-color:var(--ac)"><b id="cpv">${fa(CPV())} میلی‌متر</b></div><div class="r" style="align-items:center"><label for="lsr">فاصله‌ی خطوط:</label><input type="range" id="lsr" min="1" max="3" step="0.1" value="${LSV()}" style="flex:1;accent-color:var(--ac)"><b id="lsv">${sf(LSV())}</b></div></div><div style="overflow:hidden"><div class="paper" id="pv" style="--ls:${LSV()};line-height:${LSV()}">${withV(()=>paperHtml(AN))}</div></div>`;
+const vOut=()=>`<div class="card"><h3>بررسی و ابزارهای کمکی</h3><div class="r"><button class="p" data-a="chk">🔎 بررسی آزمون و تنظیم بارم</button></div><div class="r"><button data-a="keypdf">🗝 کلید پاسخ (PDF)</button><button data-a="keydoc">🗝 کلید پاسخ (Word)</button><button data-a="bubble">⭕ پاسخ‌برگ دانش‌آموز (PDF)</button></div></div><div class="card"><div class="r"><button class="p" data-a="pdf0">PDF بدون پاسخ</button><button class="p" data-a="pdf1">PDF با پاسخ</button></div><div class="r"><button class="p" data-a="doc0">Word بدون پاسخ</button><button class="p" data-a="doc1">Word با پاسخ</button></div><div class="r"><button data-a="json">ذخیره‌ی JSON این آزمون</button><button data-a="pv0" class="${AN?'':'p'}">پیش‌نمایش: بدون پاسخ</button><button data-a="pv1" class="${AN?'p':''}">با پاسخ</button></div><small style="color:var(--mu)">PDF: در پنجره‌ی چاپ «ذخیره به‌صورت PDF» را انتخاب کن.</small><div class="r"><label><input type="checkbox" id="hdr" ${ex.hdr===false?'':'checked'}> تکرار سطر عنوان جدول (ردیف / سوالات / بارم) و سربرگ در همه‌ی صفحات</label></div><small style="color:var(--mu)">اگر خاموش باشد، عنوان ستون‌ها و سربرگی که در Word بالای آن اضافه می‌کنی فقط در صفحه‌ی اول می‌ماند.</small><div class="r" style="align-items:center"><label>نسخه:</label><select id="vsel">${[['','اصلی'],['الف','الف'],['ب','ب'],['ج','ج'],['د','د']].map(([v,t])=>`<option value="${v}" ${VAR==v?'selected':''}>${t}</option>`).join('')}</select><label><input type="checkbox" id="vopt" ${VOPT?'checked':''}> ترتیب گزینه‌های چهارگزینه‌ای هم عوض شود</label></div><div class="r" style="align-items:center"><label for="pns">شماره‌ی صفحه (پایین برگه):</label><select id="pns">${[['','ندارد'],['n','فقط شماره'],['nt','صفحه ۱ از ۳']].map(([v,t])=>`<option value="${v}" ${(ex.pn||'')==v?'selected':''}>${t}</option>`).join('')}</select></div><div class="r" style="align-items:center"><label for="cpr">فاصله‌ی نوشته‌ها از خط جدول:</label><input type="range" id="cpr" min="0" max="15" step="1" value="${CPV()}" style="flex:1;accent-color:var(--ac)"><b id="cpv">${fa(CPV())} میلی‌متر</b></div><div class="r" style="align-items:center"><label for="fsr">اندازه‌ی فونت برگه:</label><input type="range" id="fsr" min="10" max="20" step="0.5" value="${FS()}" style="flex:1;accent-color:var(--ac)"><b id="fsv">${sf(FS())} پوینت</b></div><div class="r" style="align-items:center"><label for="lsr">فاصله‌ی خطوط:</label><input type="range" id="lsr" min="1" max="3" step="0.1" value="${LSV()}" style="flex:1;accent-color:var(--ac)"><b id="lsv">${sf(LSV())}</b></div></div>${hdCard()}${layCard()}<div style="overflow:hidden"><div class="paper" id="pv" style="--ls:${LSV()};line-height:${LSV()};font-size:${FS()}pt">${withV(()=>paperHtml(AN))}</div></div>`;
 function fitPv(){const p=$('#pv');if(p)p.style.zoom=Math.min(1,($('#v').clientWidth-4)/794)}
 function flash(id){const e=$('#'+id);e?.scrollIntoView({block:'center',behavior:'smooth'});e?.classList.add('fl');setTimeout(()=>e?.classList.remove('fl'),1800)}
 const mv=(a,i,d)=>{const j=i+d;if(j<0||j>=a.length)return false;[a[i],a[j]]=[a[j],a[i]];return true};
@@ -150,34 +154,33 @@ $('#v').onclick=e=>{const b=e.target.closest('button');if(!b)return;const a=b.da
  else if(a=='ied')openEd(F.it.type,{item:F.it});
  else if(a=='iup'||a=='idn'){if(mv(F.r.items,F.ii,a=='iup'?-1:1)){persist();render();flash('i_'+id)}}
  else if(a=='iout'){F.r.items.splice(F.ii,1);ex.rows.splice(F.ri+1,0,{id:uid(),title:'',items:[F.it]});persist();render();flash('i_'+id)}
- else if(a=='ibk'){const it=clone(F.it);chooseSubj(sj=>{bank.push({id:uid(),t:Date.now(),subj:sj,item:it});put('bank',bank.at(-1));toast('در بانک ذخیره شد')})}
+ else if(a=='ibk'){const it=clone(F.it);chooseSubj(sj=>{bank.push({id:uid(),t:Date.now(),subj:sj,item:it});put('bank',bank.at(-1));syncSoon();toast('در بانک ذخیره شد')})}
  else if(a=='bsel'){BK.s=id;bkChips();bkList()}
  else if(a=='bnew'){const nm=(prompt('نام درس جدید')||'').trim();if(nm){addSub(nm);BK.s=nm;bkChips();bkList()}}
- else if(a=='bren'){const nm=(prompt('نام جدید درس',BK.s)||'').trim();if(nm&&nm!=BK.s){SUBS=SUBS.filter(x=>x!=BK.s);addSub(nm);bank.forEach(x=>{if(x.subj==BK.s){x.subj=nm;put('bank',x)}});BK.s=nm;bkChips();bkList()}}
- else if(a=='bdsub'){if(confirm('درس حذف شود؟ سؤال‌های آن «بدون درس» می‌شوند.')){bank.forEach(x=>{if(x.subj==BK.s){x.subj='';put('bank',x)}});SUBS=SUBS.filter(x=>x!=BK.s);saveSubs();BK.s='';bkChips();bkList()}}
- else if(a=='bsub'){const x=bank.find(k=>k.id==id);chooseSubj(sj=>{x.subj=sj;put('bank',x);bkChips();bkList()})}
+ else if(a=='bren'){const nm=(prompt('نام جدید درس',BK.s)||'').trim();if(nm&&nm!=BK.s){SUBS=SUBS.filter(x=>x!=BK.s);addSub(nm);bank.forEach(x=>{if(x.subj==BK.s){x.subj=nm;x.m=Date.now();put('bank',x)}});BK.s=nm;bkChips();bkList()}}
+ else if(a=='bdsub'){if(confirm('درس حذف شود؟ سؤال‌های آن «بدون درس» می‌شوند.')){bank.forEach(x=>{if(x.subj==BK.s){x.subj='';x.m=Date.now();put('bank',x)}});SUBS=SUBS.filter(x=>x!=BK.s);saveSubs();BK.s='';bkChips();bkList()}}
+ else if(a=='bsub'){const x=bank.find(k=>k.id==id);chooseSubj(sj=>{x.subj=sj;x.m=Date.now();put('bank',x);syncSoon();bkChips();bkList()})}
  else if(a=='idel'){if(confirm('این بخش حذف شود؟')){pushU({k:'item',e:ex.id,r:F.r,ri:F.ri,i:F.ii,it:F.it});F.r.items.splice(F.ii,1);if(!F.r.items.length)ex.rows.splice(F.ri,1);persist();render()}}
- else if(a=='bad'){const x=bank.find(k=>k.id==id);x.u=(x.u||0)+1;put('bank',x,1);ex.rows.push({id:uid(),title:'',items:[{...clone(x.item),id:uid()}]});persist();toast('به آخر آزمون اضافه شد')}
+ else if(a=='bad'){const x=bank.find(k=>k.id==id);x.u=(x.u||0)+1;put('bank',x);ex.rows.push({id:uid(),title:'',items:[{...clone(x.item),id:uid()}]});persist();toast('به آخر آزمون اضافه شد')}
  else if(a=='bed'){const x=bank.find(k=>k.id==id);openEd(x.item.type,{bank:id,item:x.item})}
- else if(a=='bdel'){if(confirm('از بانک حذف شود؟')){pushU({k:'bank',rec:bank.find(k=>k.id==id)});bank=bank.filter(k=>k.id!=id);del('bank',id);bkList();bkChips()}}
+ else if(a=='bdel'){if(confirm('از بانک حذف شود؟')){pushU({k:'bank',rec:bank.find(k=>k.id==id)});bank=bank.filter(k=>k.id!=id);del('bank',id);bsyDel(id);bkList();bkChips()}}
  else if(a=='pv0'||a=='pv1'){AN=+a[2];render()}
- else if(a=='pdf0'||a=='pdf1'){preChk();$('#pp').innerHTML=`<div class="paper" style="--ls:${LSV()};line-height:${LSV()}">${withV(()=>paperHtml(+a[3]))}</div>`;const o=document.title;document.title=ex.title+(VAR?' - نسخه '+VAR:'')+(+a[3]?' - با پاسخ':'');pgStyle();setTimeout(()=>{print();document.title=o;pgStyle(true)},200)}
+ else if(a=='pdf0'||a=='pdf1'){preChk();$('#pp').innerHTML=`<div class="paper" style="--ls:${LSV()};line-height:${LSV()};font-size:${FS()}pt">${withV(()=>paperHtml(+a[3]))}</div>`;const o=document.title;document.title=ex.title+(VAR?' - نسخه '+VAR:'')+(+a[3]?' - با پاسخ':'');pgStyle();setTimeout(()=>{print();document.title=o;pgStyle(true)},200)}
  else if(a=='doc0'||a=='doc1'){preChk();const bak=ex;ex=variantOf(bak,VAR);mkDocx(+a[3]).finally(()=>{ex=bak})}
  else if(a=='json')saveBlob(new Blob([JSON.stringify({app:'azmoon',v:1,exam:ex})],{type:'application/json'}),ex.title+'.json')};
-$('#v').oninput=e=>{const t=e.target;if(t.id=='cpr'){ex.cp=+t.value;persist();$('#cpv').textContent=fa(ex.cp)+' میلی‌متر';$$('#pv [data-q]').forEach(c=>{c.style.paddingLeft=c.style.paddingRight=ex.cp+'mm'});return}if(t.id=='lsr'){ex.ls=+t.value;persist();$('#lsv').textContent=sf(ex.ls);const p=$('#pv');if(p){p.style.lineHeight=ex.ls;p.style.setProperty('--ls',ex.ls)}return}if(t.classList.contains('rtl')){ex.rows.find(r=>r.id==t.dataset.r).title=t.value;persist()}if(t.id=='bq'){BK.q=t.value;bkList()}};
+$('#v').oninput=e=>{const t=e.target;if(t.id=='fsr'){ex.fs=+t.value;persist();$('#fsv').textContent=sf(ex.fs)+' پوینت';const p=$('#pv');if(p)p.style.fontSize=ex.fs+'pt';return}if(t.id=='cpr'){ex.cp=+t.value;persist();$('#cpv').textContent=fa(ex.cp)+' میلی‌متر';$$('#pv [data-q]').forEach(c=>{c.style.paddingLeft=c.style.paddingRight=ex.cp+'mm'});return}if(t.id=='lsr'){ex.ls=+t.value;persist();$('#lsv').textContent=sf(ex.ls);const p=$('#pv');if(p){p.style.lineHeight=ex.ls;p.style.setProperty('--ls',ex.ls)}return}if(t.classList.contains('rtl')){ex.rows.find(r=>r.id==t.dataset.r).title=t.value;persist()}if(t.id=='bq'){BK.q=t.value;bkList()}};
 $('#v').onchange=e=>{if(e.target.classList.contains('sc')){ex.rows.find(r=>r.id==e.target.dataset.r).score=+e.target.value;persist();const m=$('#sum');if(m)m.textContent='جمع بارم: '+sf(total())}if(e.target.id=='bt'){BK.ty=e.target.value;bkList()}};
 $('#ttl').oninput=e=>{ex.title=e.target.value;persist()};
 $$('nav button').forEach(b=>b.onclick=()=>{T=b.dataset.t;render();scrollTo(0,0)});
 $('#up').onclick=()=>scrollTo({top:0,behavior:'smooth'});$('#dn').onclick=()=>scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
 $('#th').onclick=()=>{const n=document.documentElement.classList.toggle('n');localStorage.ao_n=n?1:'';$('meta[name=theme-color]').content=n?'#0E1815':'#FBF5E6'};
 if(localStorage.ao_n!=null?localStorage.ao_n:matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.classList.add('n');
-{const f=+localStorage.ao_fs;if(f>=12&&f<=26)document.documentElement.style.setProperty('--fs',f+'px')}
 $('#add').onclick=()=>pick(null);addEventListener('resize',()=>T=='out'&&fitPv());
 // ---------- modal + editor
 const showM=h=>{$('#md').hidden=false;$('#md').innerHTML=`<div class="box">${h}</div>`},hideM=()=>{$('#md').hidden=true;$('#md').innerHTML='';ED=null};
 const pick=row=>{ED={row};showM(`<h3>نوع سؤال</h3><div class="r">${Object.entries(TN).map(([k,v])=>`<button class="p" data-x="ty" data-n="${k}">${v}</button>`).join('')}</div><div class="r"><button data-x="ppst" style="border-color:var(--ac)">📋 چسباندن چند سؤال با تشخیص خودکار</button></div><button data-x="cl">بستن</button>`)};
 const rte=(id,h,ph)=>`<div class="ed" id="${id}" contenteditable="true" data-ph="${ph||''}">${h||''}</div>`;
-const TBAR=ty=>`<div class="tb">${[['b','<b>B</b>'],['i','<i>I</i>'],['u','<u>U</u>'],['sup','x²'],['sub','x₂'],['fr','کسر'],['tbl','جدول'],['tr','＋سطر'],['tc','＋ستون'],['dr','－سطر'],['dc','－ستون'],['dt','✕جدول'],['img','🖼 تصویر'],['rmimg','✕تصویر'],['sym','Ω علامت']].map(([c,l])=>`<button data-c="${c}">${l}</button>`).join('')}${ty=='blank'?'<button class="p" data-c="bl">نقطه‌چین</button>':''}${ty=='paren'?'<button class="p" data-c="pr">( ) پرانتز گزینه‌ها</button>':''}</div><div class="sym" hidden>${SYM.map(s=>`<button data-s="${s}">${s}</button>`).join('')}</div>`;
+const TBAR=ty=>`<div class="tb">${[['b','<b>B</b>'],['i','<i>I</i>'],['u','<u>U</u>'],['sup','x²'],['sub','x₂'],['fr','کسر'],['tbl','جدول'],['tr','＋سطر'],['tc','＋ستون'],['dr','－سطر'],['dc','－ستون'],['dt','✕جدول'],['img','🖼 تصویر'],['rmimg','✕تصویر'],['sym','Ω علامت'],['jr','راست‌چین'],['jc','وسط‌چین'],['jl','چپ‌چین']].map(([c,l])=>`<button data-c="${c}">${l}</button>`).join('')}${ty=='blank'?'<button class="p" data-c="bl">نقطه‌چین</button>':''}${ty=='paren'?'<button class="p" data-c="pr">( ) پرانتز گزینه‌ها</button>':''}</div><div class="sym" hidden>${SYM.map(s=>`<button data-s="${s}">${s}</button>`).join('')}</div>`;
 const optRows=(d,ok)=>d.opts.map((o,i)=>`<div class="orow">${ok?`<input type="radio" name="ok" value="${i}" ${i==d.ok?'checked':''}>`:''}<span>${fa(i+1)})</span><input class="oi" value="${esc(o)}"><button data-x="ro" data-n="${i}">✕</button></div>`).join('');
 const matchRows=d=>`<b>ستون راست (شماره‌دار؛ گزینه‌ی صحیح هر مورد را از لیست انتخاب کن)</b>${d.A.map((a,i)=>`<div class="orow"><span>${fa(i+1)}</span><input class="ia" value="${esc(a)}"><select class="im" title="پاسخ">${d.B.map((_,j)=>`<option value="${j}" ${d.map[i]==j?'selected':''}>${lt(j)}</option>`).join('')}</select><button data-x="rA" data-n="${i}">✕</button></div>`).join('')}<button data-x="aA">＋ آیتم راست</button><br><b>ستون چپ (جلوی هر مورد یک پرانتز می‌آید)</b>${d.B.map((b,j)=>`<div class="orow"><span>${lt(j)}</span><input class="ib" value="${esc(b)}"><button data-x="rB" data-n="${j}">✕</button></div>`).join('')}<button data-x="aB">＋ آیتم چپ</button>`;
 function edBody(d){const t=d.type;let h=`<div class="r" style="align-items:center"><b>نوع سؤال:</b><select id="e_ty">${Object.entries(TN).map(([k,v])=>`<option value="${k}" ${k==t?'selected':''}>${v}</option>`).join('')}</select></div>${TBAR(t)}${ED.bank?'':`<label>دستور کلی سؤال (اختیاری؛ بالای سؤال می‌آید، مثلاً «گزینه‌ی مناسب را انتخاب کنید»)</label><input id="e_pre" style="width:100%" placeholder="مثلاً: در بین گزینه‌های زیر، گزینه‌ی مناسب را انتخاب کنید" value="${esc(ED.pre||'')}">`}<label>بارم این سؤال (در برگه، جمع بارم‌های هر ردیف می‌آید)</label><select id="e_sc">${scO(d.score)}</select><label>متن سؤال</label>${rte('e_html',d.html,'متن سؤال…')}`;
@@ -198,7 +201,7 @@ function syncBl(vals){const box=$('#e_bl'),ed=$('#e_html');if(!box||!ed)return;c
  box.innerHTML=n?Array.from({length:n},(_,i)=>`<div class="orow"><span>${fa(i+1)})</span><input class="bli" value="${esc(old[i]||'')}"></div>`).join(''):'<small>هنوز نقطه‌چینی در متن نیست.</small>'}
 $('#md').addEventListener('input',e=>{if(e.target.id=='e_html')syncBl()});
 function sv(next){collect();const d=ED.d;if(d.type=='blank'&&(d.blanks||[]).some(x=>!x))toast('پاسخ برخی نقطه‌چین‌ها را ننوشته‌ای');if(d.type=='paren'&&!d.ans)toast('گزینه‌ی صحیح را ننوشته‌ای');if(d.type=='match'?!d.A.some(x=>x.trim()):!strip(d.html).trim()&&!/<img|<table/.test(d.html))return toast('متن سؤال خالی است');
- clearDraft();if(ED.bank){const b=bank.find(x=>x.id==ED.bank);b.item=d;put('bank',b);hideM();T='bk';render();return}
+ clearDraft();if(ED.bank){const b=bank.find(x=>x.id==ED.bank);b.item=d;b.m=Date.now();put('bank',b);syncSoon();hideM();T='bk';render();return}
  const pre=$('#e_pre')?$('#e_pre').value.trim():null;if(ED.edit){for(const k of Object.keys(ED.edit))delete ED.edit[k];Object.assign(ED.edit,d);const f=find(d.id);if(f&&pre!==null)f.r.title=pre}else{let r=ED.row&&ex.rows.find(x=>x.id==ED.row);if(!r){r={id:uid(),title:'',items:[]};ex.rows.push(r);ED.row=r.id}if(pre!==null)r.title=pre;r.items.push(d)}
  persist();if(next&&!ED.edit){const ro=ED.row;render();openEd(d.type,{row:ro});toast('ثبت شد؛ سؤال بعدی');return}hideM();T='ex';render();flash('i_'+d.id)}
 const ins=h=>document.execCommand('insertHTML',false,h);
@@ -211,6 +214,7 @@ function cmd(c){draftSoon();const m={b:'bold',i:'italic',u:'underline',sup:'supe
  if(c=='img'){$('#fim').click();return}
  if(!lastE)return toast('اول داخل کادر متن کلیک کن');
  if(m[c])document.execCommand(m[c]);else if(c=='fr'){const a=prompt('صورت کسر (عدد بالا)','۱');if(a===null)return;const b=prompt('مخرج کسر (عدد پایین)','۲');if(b===null)return;insNode(mkFr(fa(a.trim()),fa(b.trim())))}
+ else if(c=='jr'||c=='jc'||c=='jl')document.execCommand({jr:'justifyRight',jc:'justifyCenter',jl:'justifyLeft'}[c]);
  else if(c=='tbl'){const r=+prompt('تعداد سطر',3),k=+prompt('تعداد ستون',3);if(r>0&&k>0){const t=document.createElement('table');t.className='qt';for(let i=0;i<r;i++){const tr=t.insertRow();for(let j=0;j<k;j++)tr.insertCell().innerHTML='&nbsp;'}insNode(t)}}
  else if(c=='bl'){document.execCommand('insertText',false,'……………');setTimeout(syncBl,0)}
  else if(c=='pr')document.execCommand('insertText',false,'( گزینه‌ی اول - گزینه‌ی دوم )');
@@ -244,15 +248,15 @@ $('#md').addEventListener('change',async e=>{if(e.target.id!='fj')return;try{con
  for(const x of ad){if(exams.some(k=>k.id==x.id))x.id=uid();migr(x);exams.push(x);await put('exams',x)}for(const b of o.bank||[]){b.id=uid();legacy(b.item);bank.push(b);await put('bank',b)}for(const x of o.subs||[])addSub(x);for(const x of o.results||[]){if(!(await all('results')).some(q=>q.id==x.id))await put('results',x)}if(o.col&&o.col.sk&&!COL().sk)colSave(o.col);if(o.ros&&o.ros.length&&!ROS().length)rosSave(o.ros);if(ad.length){ex=ad.at(-1);localStorage.ao_cur=ex.id}hideM();render();toast('بازیابی شد')}catch{toast('فایل معتبر نیست')}});
 $('#fim').onchange=e=>{addImgs([...e.target.files]);e.target.value=''};
 function mExams(){showM(`<h3>آزمون‌ها</h3>${[...exams].sort((a,b)=>b.t-a.t).map(k=>`<div class="it"><span class="pv"><b>${esc(k.title)}</b> · ${fa(k.rows.length)} سؤال</span><button data-x="xo" data-n="${k.id}">باز کردن</button><button data-x="xd" data-n="${k.id}">کپی</button><button data-x="xx" data-n="${k.id}">🗑</button></div>`).join('')}
- <div class="r"><button class="p" data-x="xn">＋ آزمون جدید</button><button data-x="xj">ذخیره JSON این آزمون</button><button data-x="xb">پشتیبان کامل (همه + بانک + نتایج)</button><button data-x="pi">📲 نصب برنامه</button><label class="b">بازیابی از JSON<input type="file" accept=".json,application/json" hidden id="fj"></label></div><div class="r" style="align-items:center"><label for="fsr" style="margin:0">اندازه‌ی نوشته‌ها:</label><input type="range" id="fsr" min="12" max="26" step="1" value="${+localStorage.ao_fs||16}" style="flex:1;accent-color:var(--ac)"><b id="fsv">${fa(+localStorage.ao_fs||16)}</b><button data-a="fs0">پیش‌فرض</button></div><small id="us"></small><button data-x="cl">بستن</button>`);
+ <div class="r"><button class="p" data-x="xn">＋ آزمون جدید</button><button data-x="xj">ذخیره JSON این آزمون</button><button data-x="xb">پشتیبان کامل (همه + بانک + نتایج)</button><button data-x="pi">📲 نصب برنامه</button><label class="b">بازیابی از JSON<input type="file" accept=".json,application/json" hidden id="fj"></label></div><div class="r"><label>اندازه‌ی نوشته‌های برنامه:</label><select id="uiz">${[['0.9','۹۰٪'],['1','۱۰۰٪'],['1.15','۱۱۵٪'],['1.3','۱۳۰٪']].map(([v,t])=>`<option value="${v}" ${(localStorage.ao_uiz||'1')==v?'selected':''}>${t}</option>`).join('')}</select></div><small id="us"></small><button data-x="cl">بستن</button>`);
  navigator.storage?.estimate?.().then(s=>{const u=$('#us');if(u)u.textContent=`فضای مصرفی: ${fa((s.usage/1048576).toFixed(1))} مگابایت از ${fa((s.quota/1073741824).toFixed(1))} گیگابایت`})}
 $('#mnu').onclick=mExams;
 // ---------- Word export (mirrors the PDF layout)
 const loadDocx=async()=>{if(window.docx)return window.docx;for(const u of['https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js','https://unpkg.com/docx@8.5.0/build/index.umd.js','https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.min.js']){try{await new Promise((ok,no)=>{const x=document.createElement('script');x.src=u;x.onload=ok;x.onerror=no;document.head.appendChild(x)});if(window.docx)return window.docx}catch{}}return null};
 async function mkDocx(a){toast('در حال ساخت Word…');const d=await loadDocx();if(!d)return toast('کتابخانه‌ی Word لود نشد؛ اینترنت را بررسی کن و دوباره بزن');
  try{const FN={ascii:'B Nazanin',cs:'B Nazanin',hAnsi:'B Nazanin',eastAsia:'B Nazanin'},RED='D00000',W=10206,GW=7500;
- const R=(t,o={})=>new d.TextRun({text:t,font:FN,size:28,sizeComplexScript:28,rightToLeft:true,bold:!!o.b,boldComplexScript:!!o.b,italics:!!o.i,italicsComplexScript:!!o.i,underline:o.u?{}:undefined,superScript:!!o.sup,subScript:!!o.sub,color:o.col});
- const Pg=(r,ind)=>new d.Paragraph({children:r,bidirectional:true,indent:ind?{start:ind}:undefined,spacing:{after:80,line:Math.round(240*LSV())}});
+ const R=(t,o={})=>new d.TextRun({text:t,font:FN,size:Math.round(FS()*2),sizeComplexScript:Math.round(FS()*2),rightToLeft:true,bold:!!o.b,boldComplexScript:!!o.b,italics:!!o.i,italicsComplexScript:!!o.i,underline:o.u?{}:undefined,superScript:!!o.sup,subScript:!!o.sub,color:o.col});
+ const Pg=(r,ind)=>new d.Paragraph({children:r,alignment:({right:d.AlignmentType.START,left:d.AlignmentType.END,center:d.AlignmentType.CENTER})[r.al],bidirectional:true,indent:ind?{start:ind}:undefined,spacing:{after:80,line:Math.round(240*LSV())}});
  const img=c=>{const w0=+c.dataset.w||200,h0=+c.dataset.h||150,s=Math.min(1,340/w0),b=atob(c.getAttribute('src').split(',')[1]),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return new d.ImageRun({data:u,type:'jpg',transformation:{width:Math.round(w0*s),height:Math.round(h0*s)}})};
  const frac=(x,y)=>{try{return new d.Math({children:[new d.MathFraction({numerator:[new d.MathRun(x)],denominator:[new d.MathRun(y)]})]})}catch{return R(x+'/'+y)}};
  const inl=(n,st,out)=>{n.childNodes.forEach(c=>{if(c.nodeType==3){if(c.textContent)out.push(R(c.textContent,st))}else if(c.nodeType==1){const g=c.tagName,s={...st};
@@ -261,13 +265,13 @@ async function mkDocx(a){toast('در حال ساخت Word…');const d=await loa
   else if(c.classList.contains('bl'))out.push(R(c.textContent,c.classList.contains('a')?{...st,b:1,u:1,col:RED}:st));
   else if(c.classList.contains('fr'))out.push(frac(c.children[0]?.textContent||'',c.children[1]?.textContent||''));else inl(c,s,out)}})};
  const blocks=(html,st0={})=>{const root=document.createElement('div');root.innerHTML=html;const res=[];let cur=[];const fl=()=>{if(cur.length){res.push(cur);cur=[]}};
-  (function walk(n){n.childNodes.forEach(c=>{const g=c.tagName;if(g=='TABLE'){fl();res.push(tbl(c))}else if(/^(DIV|P|LI|UL|OL)$/.test(g)){fl();walk(c);fl()}else inl({childNodes:[c]},st0,cur)})})(root);fl();return res};
+  (function walk(n){n.childNodes.forEach(c=>{const g=c.tagName;if(g=='TABLE'){fl();res.push(tbl(c))}else if(/^(DIV|P|LI|UL|OL)$/.test(g)){fl();const s0=res.length;walk(c);fl();const al=c.style&&c.style.textAlign;if(al)for(let i=s0;i<res.length;i++)if(Array.isArray(res[i])&&!res[i].al)res[i].al=al}else inl({childNodes:[c]},st0,cur)})})(root);fl();return res};
  const kids=h=>{const b=blocks(h);return(b.length?b:[[]]).map(x=>Array.isArray(x)?Pg(x):x).concat(blocks(h).at(-1)instanceof d.Table?[Pg([])]:[])};
  const tbl=el=>new d.Table({rows:[...el.querySelectorAll('tr')].map(tr=>new d.TableRow({children:[...tr.children].map(td=>new d.TableCell({children:kids(td.innerHTML)}))})),visuallyRightToLeft:true});
- const P=(pre,html,ind,st)=>{const b=blocks(html,st);if(Array.isArray(b[0]))b[0]=[...pre,...b[0]];else b.unshift(pre);return b.map(x=>Array.isArray(x)?Pg(x,ind):x)};
+ const P=(pre,html,ind,st,post)=>{const b=blocks(html,st);if(Array.isArray(b[0])){const al=b[0].al;b[0]=[...pre,...b[0],...(post||[])];b[0].al=al}else b.unshift([...pre,...(post||[])]);return b.map(x=>Array.isArray(x)?Pg(x,ind):x)};
  const grid=(rows,w,ind)=>new d.Table({rows:rows.map(cs=>new d.TableRow({children:cs.map((c,i)=>new d.TableCell({width:{size:Math.round(GW*w[i]),type:d.WidthType.DXA},children:[Pg(c)]}))})),visuallyRightToLeft:true,width:{size:GW,type:d.WidthType.DXA},columnWidths:w.map(x=>Math.round(GW*x)),borders:d.TableBorders.NONE});
  const optRun=(it,k)=>{const o=it.opts[k];return o==null?[]:[R(`${fa(k+1)}) ${o}`,{b:a&&k==it.ok,u:a&&k==it.ok,col:a&&k==it.ok?RED:undefined})]};
- const itemK=(it,pre,ind)=>{const o=P(pre,lead(it,a),ind);
+ const itemK=(it,pre,ind,post)=>{const o=P(pre,lead(it,a),ind,undefined,post);
   if(it.type=='mc'){const c=it.lay||4,rows=[];for(let i=0;i<it.opts.length;i+=c)rows.push(Array.from({length:c},(_,j)=>optRun(it,i+j)));o.push(grid(rows,Array(c).fill(1/c)));
    if(a)o.push(...P([R('پاسخ: ',{b:1,col:RED}),R('گزینه‌ی '+fa(it.ok+1)+(it.ans?' — ':''),{col:RED})],it.ans||'',ind,{col:RED}))}
   if(it.type=='match'){const rows=[],n=Math.max(it.A.length,it.B.length),inv=j=>{const i=it.map.indexOf(j);return i>=0?fa(i+1):'—'};for(let i=0;i<n;i++){const x=i<it.B.length;rows.push([i<it.A.length?[R(fa(i+1)+'. '+it.A[i])]:[],x?(a?[R('( '),R(inv(i),{col:RED}),R(' )')]:[R('(       )')]):[],x?[R(it.B[i])]:[]])}o.push(grid(rows,[.42,.14,.44]))}
@@ -275,12 +279,18 @@ async function mkDocx(a){toast('در حال ساخت Word…');const d=await loa
   return o};
  const endP=l=>l.at(-1)instanceof d.Paragraph?l:[...l,new d.Paragraph({spacing:{before:0,after:0,line:20,lineRule:d.LineRuleType.EXACTLY},children:[]})];
  const cp=(t,b)=>new d.Paragraph({alignment:d.AlignmentType.CENTER,bidirectional:true,children:t?[R(t,{b})]:[]});
- const cw=[.09,.79,.12],C=(ch,i,fill)=>new d.TableCell({width:{size:Math.round(W*cw[i]),type:d.WidthType.DXA},shading:fill?{fill,type:d.ShadingType.CLEAR,color:'auto'}:undefined,margins:i==1?{marginUnitType:d.WidthType.DXA,top:0,bottom:0,left:Math.round(CPV()*56.69),right:Math.round(CPV()*56.69)}:undefined,children:ch});
- const trs=[new d.TableRow({tableHeader:ex.hdr!==false?true:undefined,children:['ردیف','سوالات','بارم'].map((t,i)=>C([cp(t,1)],i,'E8E8E8'))})];
+ const LY=LYT(),colW=LY.map(c=>Math.round(W*c.w/100));
+ const hdrDocx=()=>{const h=ex.hd;if(!h||!h.c||!h.c.length||h.on===false)return[];const tot=h.w.reduce((x,y)=>x+(+y||0),0)||1,cwd=h.w.map(x=>Math.round(W*(+x||0)/tot)),AL={r:d.AlignmentType.START,l:d.AlignmentType.END,c:d.AlignmentType.CENTER};
+  const rows=h.c.map((row,ri)=>{const cells=[];row.forEach((x,ci)=>{if(x.hid)return;let w=0;for(let j=ci;j<ci+x.cs;j++)w+=cwd[j]||0;const sz=Math.round((x.z||FS())*2);
+   cells.push(new d.TableCell({width:{size:w,type:d.WidthType.DXA},columnSpan:x.cs>1?x.cs:undefined,rowSpan:x.rs>1?x.rs:undefined,verticalAlign:d.VerticalAlign.CENTER,children:String(x.t||'').split('\n').map(line=>new d.Paragraph({alignment:AL[x.a||'c'],bidirectional:true,spacing:{before:30,after:30},children:line?[new d.TextRun({text:line,font:FN,size:sz,sizeComplexScript:sz,rightToLeft:true,bold:!!x.b,boldComplexScript:!!x.b})]:[]}))}))});
+   return new d.TableRow({cantSplit:true,height:h.h[ri]>0?{value:Math.round(h.h[ri]*56.69),rule:d.HeightRule.ATLEAST}:undefined,children:cells})});
+  return[new d.Table({rows,visuallyRightToLeft:true,width:{size:W,type:d.WidthType.DXA},columnWidths:cwd,borders:h.bd===false?d.TableBorders.NONE:undefined}),new d.Paragraph({spacing:{before:0,after:80},children:[]})]};
+ const trs=[new d.TableRow({tableHeader:ex.hdr!==false?true:undefined,children:LY.map((c,i)=>new d.TableCell({width:{size:colW[i],type:d.WidthType.DXA},shading:{fill:'E8E8E8',type:d.ShadingType.CLEAR,color:'auto'},children:[cp(c.t,1)]}))})];
  ex.rows.forEach((r,ri)=>{const s=r.items;let k=[];
-  if(r.title)k.push(...P([],esc(r.title),0));if(s.length==1)k.push(...itemK(s[0],[],0));else{s.forEach((it,i)=>k.push(...itemK(it,[R(lt(i)+') ',{b:1})],0)))}
-  trs.push(new d.TableRow({cantSplit:true,children:[C([cp(fa(ri+1),1)],0),C(endP(k),1),C([cp(rowTotal(r)?sf(rowTotal(r)):'')],2)]}))});
- const out=[...(ex.vl?[new d.Paragraph({alignment:d.AlignmentType.CENTER,bidirectional:true,spacing:{after:80},children:[R('نسخه‌ی '+ex.vl,{b:1})]})]:[]),new d.Table({rows:trs,visuallyRightToLeft:true,width:{size:W,type:d.WidthType.DXA},columnWidths:cw.map(x=>Math.round(W*x))})];
+  if(r.title)k.push(...P([],esc(r.title),0));if(s.length==1)k.push(...itemK(s[0],[],0));else{s.forEach((it,i)=>k.push(...itemK(it,[R(lt(i)+') ',{b:1})],0,PBM()&&it.score?[R('\u00a0\u00a0'+bmTxt(it.score),{b:1})]:null)))}
+  const mh=rowMin(r);
+  trs.push(new d.TableRow({cantSplit:true,height:mh>0?{value:Math.round(mh*56.69),rule:d.HeightRule.ATLEAST}:undefined,children:LY.map((c,i)=>new d.TableCell({width:{size:colW[i],type:d.WidthType.DXA},margins:c.k=='q'?{marginUnitType:d.WidthType.DXA,top:0,bottom:0,left:Math.round(CPV()*56.69),right:Math.round(CPV()*56.69)}:undefined,children:c.k=='q'?endP(k):c.k=='n'?[cp(fa(ri+1),1)]:c.k=='b'?[cp(rowTotal(r)?sf(rowTotal(r)):'')]:[cp('')]}))}))});
+ const out=[...hdrDocx(),...(ex.vl?[new d.Paragraph({alignment:d.AlignmentType.CENTER,bidirectional:true,spacing:{after:80},children:[R('نسخه‌ی '+ex.vl,{b:1})]})]:[]),new d.Table({rows:trs,visuallyRightToLeft:true,width:{size:W,type:d.WidthType.DXA},columnWidths:colW})];
  const fr=t=>new d.TextRun({text:t,font:FN,size:22,sizeComplexScript:22,rightToLeft:true}),fp=g=>new d.TextRun({children:[g],font:FN,size:22,sizeComplexScript:22,rightToLeft:true}),
   foot=ex.pn?new d.Footer({children:[new d.Paragraph({alignment:d.AlignmentType.CENTER,bidirectional:true,children:ex.pn=='nt'?[fr('صفحه '),fp(d.PageNumber.CURRENT),fr(' از '),fp(d.PageNumber.TOTAL_PAGES)]:[fp(d.PageNumber.CURRENT)]})]}):null;
  const doc=new d.Document({sections:[{properties:{page:{size:{width:11906,height:16838},margin:{top:850,right:850,bottom:850,left:850}}},footers:foot?{default:foot}:undefined,children:out}]});
@@ -454,7 +464,7 @@ function gradeRes(res,exm){const auto=(exm.ol||{}).auto!==false;let tot=0,max=0,
 async function shrink(h,mx,q){if(!h||!h.includes('<img'))return h;const d=document.createElement('div');d.innerHTML=h;for(const im of d.querySelectorAll('img')){const u=await compressImageDataUrl(im.src,mx,q);if(u)im.src=u}return d.innerHTML}
 async function payload(mx,q){const o=olv(),rows=[];
  for(const r of ex.rows){const items=[];for(const it of r.items){const c=clone(legacy(it));if(c.type=='paren'){const pi=parenInfo(it);c.po=pi?pi.opts:null;c.pg=pi?pi.g:-1}delete c.ok;delete c.ans;delete c.map;delete c.blanks;c.html=await shrink(c.html||'',mx,q);items.push(c)}rows.push({id:r.id,title:r.title||'',score:rowTotal(r),items})}
- return{v:1,id:ex.id,title:o.name||ex.title,ol:{minutes:o.minutes,rules:o.rules,order:o.order,view:o.view,shuffle:o.shuffle,lim:o.lim,s:o.s,e:o.e},col:(()=>{const C=COL();return C.u&&o.col!==false?{u:C.u,k:C.sk}:null})(),names:(()=>{const l=ROS().find(x=>x.id==o.ros);return o.rolock&&l?l.names:null})(),rows}}
+ return{v:1,id:ex.id,title:o.name||ex.title,ol:{minutes:o.minutes,rules:o.rules,order:o.order,view:o.view,shuffle:o.shuffle,lim:o.lim,s:o.s,e:o.e},col:(()=>{const C=COL();return C.u&&o.col!==false?{u:C.u,k:C.sk}:null})(),names:(()=>{const n=rosNames(o);return o.rolock&&n.length?n:null})(),rows}}
 async function standalone(p){const code=await encodeData(p),mk='<scr'+'ipt id="examDataEmbed" type="application/octet-stream"></scr'+'ipt>';
  if(!PRISTINE.includes(mk))throw new Error('marker');return PRISTINE.replace(mk,()=>'<scr'+'ipt id="examDataEmbed" type="application/octet-stream">'+code+'</scr'+'ipt>').replace(/<title>.*?<\/title>/,'<title>'+esc(p.title)+'</title>')}
 const baseUrl=()=>location.protocol=='file:'?location.href.split('?')[0]:location.origin+location.pathname;
@@ -472,15 +482,15 @@ const vOl=()=>{const GC=colInit(),o=olv(),j=jalaaliToday(),S=o.s||{jy:j.jy,jm:j.
  <div class="r"><button data-a="gcopy">📋 کپی کد اسکریپت</button></div>
  <div class="r"><button data-a="gexp">📤 کپی «کد اتصال» (برای گوشی یا دستگاه دیگر)</button></div>
  <div class="r"><input id="g_imp" style="flex:1;min-width:0;direction:ltr" placeholder="کد اتصال را اینجا بچسبان"><button data-a="gimp">📥 وارد کردن</button></div>
- <div class="r"><label><input type="checkbox" id="sy_on" ${localStorage.ao_sync==='1'?'checked':''}> همگام‌سازی خودکار آزمون‌ها و بانک سؤال بین دستگاه‌ها (کامپیوتر و گوشی)</label></div>
+ <div class="r"><label><input type="checkbox" id="sy_on" ${localStorage.ao_sync==='1'?'checked':''}> همگام‌سازی خودکار آزمون‌ها بین دستگاه‌ها (کامپیوتر و گوشی)</label></div>
  <div class="r"><button data-a="sysync">🔄 همگام‌سازی همین حالا</button></div><div id="sy_st" style="color:var(--mu)">${esc(localStorage.ao_syst||'')}</div>
- <small style="color:var(--mu)">لازم است روی هر دو دستگاه «کد اتصال» وارد شده و کد اسکریپت جدید یک‌بار جایگزین و New version شده باشد. حذف آزمون روی یک دستگاه روی دستگاه دیگر هم اثر می‌کند. اگر یک آزمون را همزمان روی دو دستگاه تغییر بدهی، هر دو نسخه نگه داشته می‌شود.</small><small style="color:var(--mu)">بانک سؤال هم همگام می‌شود: سؤال و درس تازه به دستگاه دیگر می‌رود، و سؤالی که حذف کنی روی دستگاه دیگر هم حذف می‌شود و برنمی‌گردد. اگر یک سؤال را روی هر دو دستگاه ویرایش کنی، آخرین ویرایش می‌ماند. برای بانک لازم نیست کد اسکریپت را عوض کنی.</small>
+ <small style="color:var(--mu)">لازم است روی هر دو دستگاه «کد اتصال» وارد شده و کد اسکریپت جدید یک‌بار جایگزین و New version شده باشد. حذف آزمون روی یک دستگاه روی دستگاه دیگر هم اثر می‌کند. اگر یک آزمون را همزمان روی دو دستگاه تغییر بدهی، هر دو نسخه نگه داشته می‌شود.</small>
  <small style="color:var(--mu)">روی دستگاه دوم لازم نیست کد اسکریپت را دوباره بچسبانی یا Deploy کنی؛ فقط «کد اتصال» را همان‌جا وارد کن. این کد محرمانه است؛ فقط برای خودت بفرست.</small>
  <input id="g_url" style="width:100%;direction:ltr" placeholder="https://script.google.com/macros/s/.../exec" value="${esc(GC.u||'')}">
  <div class="r"><button class="p" data-a="gtest">🔌 آزمایش اتصال</button></div><div id="g_st"></div><details><summary style="cursor:pointer;margin:6px 0">🛠 اگر وصل نشد</summary><div style="line-height:2">دکمه‌ی «🔎 باز کردن آدرس آزمایشی» را بزن و ببین در تب جدید چه می‌نویسد (بهتر است در پنجره‌ی ناشناس/Incognito باز کنی):<br>• <code>{"ok":true}</code> ← همه‌چیز درست است؛ صفحه را با Ctrl+Shift+R رفرش کن و دوباره تست کن.<br>• <code>{"ok":false,"e":"key"}</code> ← کد اسکریپت قدیمی است؛ دوباره کپی و جایگزین کن و New version منتشر کن.<br>• صفحه‌ی ورود به حساب گوگل ← دسترسی روی Anyone نیست.<br>• <code>Script function not found: doGet</code> ← کد ذخیره یا Deploy نشده.<br>• <code>Sorry, unable to open the file</code> ← آدرس اشتباه یا ناقص است.<br>اگر حساب گوگلت مدرسه‌ای/سازمانی است، ممکن است مدیر گزینه‌ی Anyone را بسته باشد؛ با یک حساب شخصی (gmail) امتحان کن.</div></details>
  <div class="r"><label><input type="checkbox" id="g_on" ${o.col===false?'':'checked'}> ارسال خودکار نتیجه برای این آزمون</label></div>
  <small style="color:var(--mu)">بعد از تنظیم یا تغییر آدرس، فایل و لینک آزمون را دوباره بساز.</small></div>
- <div class="card"><h3>لیست دانش‌آموزان (اختیاری)</h3><small style="color:var(--mu)">برای اینکه بعد از آزمون ببینی چه کسانی نتیجه نداده‌اند.</small><div class="r"><select id="ro_sel"><option value="">بدون لیست</option>${ROS().map(l=>`<option value="${l.id}" ${o.ros==l.id?'selected':''}>${esc(l.name)} (${fa(l.names.length)} نفر)</option>`).join('')}</select><button data-a="roman">✎ مدیریت لیست‌ها</button></div><div class="r"><label><input type="checkbox" id="ro_lock" ${o.rolock?'checked':''}> دانش‌آموز نامش را از فهرست انتخاب کند (نام همه‌ی لیست داخل فایل آزمون می‌آید)</label></div></div>
+ <div class="card"><h3>لیست دانش‌آموزان (اختیاری؛ می‌توانی چند کلاس را با هم تیک بزنی)</h3><small style="color:var(--mu)">برای اینکه بعد از آزمون ببینی چه کسانی نتیجه نداده‌اند.</small><div class="r"><div id="ro_chk" style="flex:1">${ROS().length?ROS().map(l=>`<label class="ch"><input type="checkbox" data-rc="${l.id}" ${rosIds(o).includes(l.id)?'checked':''}> ${esc(l.name)} (${fa(l.names.length)} نفر)</label>`).join(''):'<small>هنوز لیستی نساخته‌ای.</small>'}</div><button data-a="roman">✎ مدیریت لیست‌ها</button></div><div class="r"><label><input type="checkbox" id="ro_lock" ${o.rolock?'checked':''}> دانش‌آموز نامش را از فهرست انتخاب کند (نام همه‌ی لیست داخل فایل آزمون می‌آید)</label></div></div>
  <div class="card"><h3>انتشار</h3><div class="r"><button class="p" data-a="olink">🔗 ساخت لینک آزمون</button><button class="p" data-a="ofile">📦 دانلود فایل آزمون (HTML)</button></div><div id="o_out"></div>
  <small style="color:var(--mu)">لینک نیاز دارد برنامه روی یک آدرس اینترنتی باشد. فایل HTML مستقل است و بدون اینترنت هم روی گوشی دانش‌آموز باز می‌شود. کلید پاسخ‌ها داخل لینک یا فایل نیست.</small></div>`};
 const winRead=()=>{const o=olv();o.s={...readJalaliSelects('os'),t:$('#o_st').value||'08:00'};o.e={...readJalaliSelects('oe'),t:$('#o_et').value||'20:00'}};
@@ -488,7 +498,7 @@ const winRead=()=>{const o=olv();o.s={...readJalaliSelects('os'),t:$('#o_st').va
 let RS={ex:'',rs:[],L:[]};
 const vRs=()=>{if(!exams.find(k=>k.id==RS.ex))RS.ex=ex.id;return `<div class="card"><label>آزمون</label><select id="rsx" style="width:100%">${[...exams].sort((a,b)=>b.t-a.t).map(k=>`<option value="${k.id}" ${k.id==RS.ex?'selected':''}>${esc(k.title)}</option>`).join('')}</select>
  <label>فایل‌های نتیجه‌ی دانش‌آموزان (چند فایل را می‌توانی یک‌جا انتخاب کنی)</label><div class="r"><label class="b p">📂 افزودن فایل‌های نتیجه<input type="file" id="rfl" multiple hidden></label></div>
- ${COL().u?'<div class="r"><button class="p" data-a="gpull">☁️ دریافت نتایج از Google Sheet</button></div>':''}<details><summary style="cursor:pointer;color:var(--mu)">چسباندن کد متنی (برای نتیجه‌های قدیمی)</summary><textarea id="rcd" rows="3" style="width:100%;background:var(--bg);color:inherit;border:1px solid var(--ln);border-radius:10px;padding:8px"></textarea><button class="p" data-a="rimp">➕ افزودن نتیجه‌ها</button></details></div><div class="card"><h3>کارنامه‌ی تجمیعی کلاس</h3><small style="color:var(--mu)">نمره‌ی چند آزمون را کنار هم می‌گذارد و میانگین می‌گیرد؛ خروجی Excel یا CSV.</small><div class="r"><button class="p" data-a="agg">📊 ساخت کارنامه‌ی تجمیعی</button></div></div><div id="rl"></div><div id="rm"></div>`};
+ ${COL().u?'<div class="r"><button class="p" data-a="gpull">☁️ دریافت نتایج از Google Sheet</button></div>':''}<div class="r"><button data-a="gbk">📊 کارنامه‌ی تجمیعی کلاس (چند آزمون)</button></div><details><summary style="cursor:pointer;color:var(--mu)">چسباندن کد متنی (برای نتیجه‌های قدیمی)</summary><textarea id="rcd" rows="3" style="width:100%;background:var(--bg);color:inherit;border:1px solid var(--ln);border-radius:10px;padding:8px"></textarea><button class="p" data-a="rimp">➕ افزودن نتیجه‌ها</button></details></div><div id="rl"></div><div id="rm"></div>`};
 function rsManage(A){const m=$('#rm');if(!m)return;const by={};A.forEach(r=>by[r.exId]=(by[r.exId]||0)+1);const l=exams.filter(k=>by[k.id]);
  m.innerHTML=l.length?`<div class="card"><h3>حذف نتایج آزمون‌ها</h3><small style="color:var(--mu)">با زدن دکمه‌ی هر آزمون، همه‌ی نتایج همان آزمون یک‌جا حذف می‌شود.</small>${l.map(k=>`<div class="it"><span class="pv"><b>${esc(k.title)}</b></span><span>${fa(by[k.id])} نتیجه</span><button data-a="rdall" data-i="${k.id}" style="border-color:var(--dg);color:var(--dg)">🗑 حذف همه‌ی نتایج</button></div>`).join('')}</div>`:''}
 const bar=p=>`<div style="background:var(--ln);border-radius:8px;height:10px"><div style="width:${Math.max(0,Math.min(100,Math.round(p)))}%;height:10px;border-radius:8px;background:linear-gradient(90deg,#1E9E78,var(--ac2))"></div></div>`;
@@ -587,7 +597,7 @@ async function startStudent(code){
  const intro=()=>{const n=Date.now(),bad=S0&&n<S0?'آزمون هنوز شروع نشده است. شروع: '+jalaliDateLabel(O.s)+' ساعت '+fa(O.s.t):(E0&&n>E0?'زمان این آزمون به پایان رسیده است.':'');
   st.innerHTML=`<div class="card"><h2>${esc(P.title)}</h2>${O.rules?`<p style="white-space:pre-wrap;color:var(--dg)">${esc(O.rules)}</p>`:''}<p>تعداد سؤال: ${fa(P.rows.length)}${O.minutes?' · مدت: '+fa(O.minutes)+' دقیقه':''}</p>`+(bad?`<p><b>${bad}</b></p>`:'')+
   `<label>نام و نام خانوادگی</label>${P.names?`<select id="sn" style="width:100%"><option value="">— نام خود را انتخاب کن —</option>${P.names.map(n=>`<option>${esc(n)}</option>`).join('')}</select>`:'<input id="sn" style="width:100%">'}`+(bad?'':`<label>کلاس / شماره (اختیاری)</label><input id="sc" style="width:100%">`)+
-  `<div class="r">${bad?'':'<button class="p" id="sgo">شروع آزمون</button>'}<button id="srec">🔎 قبلاً آزمون را داده‌ام و فقط فایل نتیجه‌ام را می‌خواهم</button></div><div id="sro"></div><small style="color:var(--mu)">نسخه‌ی برنامه: ۲۰</small></div>`;
+  `<div class="r">${bad?'':'<button class="p" id="sgo">شروع آزمون</button>'}<button id="srec">🔎 قبلاً آزمون را داده‌ام و فقط فایل نتیجه‌ام را می‌خواهم</button></div><div id="sro"></div><small style="color:var(--mu)">نسخه‌ی برنامه: ۲۱</small></div>`;
   if(!bad)$('#sgo').onclick=async()=>{const nm=$('#sn').value.trim();if(!nm)return toast('نام را وارد کن');const prev=await sget('d:'+nz(nm));if(prev){toast('برای این نام قبلاً نتیجه ثبت شده است');return fin(prev)}
    const ix=P.rows.map((_,i)=>i);Z={nm,cls:$('#sc').value.trim(),t0:Date.now(),ord:O.order=='random'?shuf(ix):ix,pos:0,mo:{},ans:{},img:{}};fdone=false;await sput('s',Z);run()};
   $('#srec').onclick=async()=>{const nm=$('#sn').value.trim();if(!nm)return toast('اول نام را همان‌طور که موقع آزمون نوشتی وارد کن');const c=await sget('d:'+nz(nm));if(c)fin(c);else $('#sro').innerHTML='<p>برای این نام روی این دستگاه نتیجه‌ای پیدا نشد. باید از همان گوشی و همان مرورگری باز کنی که آزمون را در آن دادی.</p>'}};
@@ -674,7 +684,7 @@ function mkItem(b){const t=b.stem.join(' ').trim(),id=uid(),ty=b.type;
  if(ty=='blank'){const n=(t.match(R_DOTS())||[]).length,an=b.ans?b.ans.split(/[،;؛]|\s+-\s+/).map(x=>x.trim()):[];return{id,type:'blank',html:esc(t),blanks:Array.from({length:n},(_,i)=>an[i]||'')}}
  if(ty=='paren')return{id,type:'paren',html:esc(t),ans:b.ans.trim()};
  if(ty=='match')return matchItem(b,t);
- return{id,type:'desc',html:esc(t)+(b.opts.length?'<br>'+b.opts.map(esc).join('<br>'):''),ans:'',lines:0}}
+ return{id,type:'desc',html:esc(t)+(b.opts.length?'<br>'+b.opts.map(esc).join('<br>'):''),ans:esc(b.ans||''),lines:0}}
 let PB=[],PRE='';
 const pinfo=b=>{const t=b.type;if(t=='mc'){const k=mcOk(b);return fa(b.opts.length)+' گزینه'+(k>=0?' · پاسخ: '+fa(k+1):' · پاسخ مشخص نشد')}if(t=='tf')return b.ans?'پاسخ: '+b.ans:'پاسخ مشخص نشد (پیش‌فرض: صحیح)';
  if(t=='blank'){const n=(b.stem.join(' ').match(R_DOTS())||[]).length;return fa(n)+' نقطه‌چین'+(b.ans?'':' · پاسخ مشخص نشد')}if(t=='paren')return b.ans?'پاسخ: '+b.ans:'پاسخ مشخص نشد';
@@ -689,7 +699,7 @@ $('#md').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
  else if(x=='pdet'){const r=parseBlocks($('#pt').value);PRE=r.pre;PB=r.blocks.map(q=>({...q,type:ident(q),on:true}));drawPB()}
  else if(x=='padd'){const sel=PB.filter(q=>q.on);if(!sel.length)return toast('سؤالی انتخاب نشده');const first=ex.rows.length;
   sel.forEach((q,i)=>ex.rows.push({id:uid(),title:i==0?PRE:'',score:0,items:[mkItem(q)]}));persist();hideM();T='ex';render();flash('r_'+ex.rows[first].id);toast(fa(sel.length)+' سؤال به آزمون اضافه شد')}
- else if(x=='pbk'){const sel=PB.filter(q=>q.on);if(!sel.length)return toast('سؤالی انتخاب نشده');chooseSubj(sj=>{sel.forEach(q=>{bank.push({id:uid(),t:Date.now(),subj:sj,item:mkItem(q)});put('bank',bank.at(-1))});toast(fa(sel.length)+' سؤال در بانک ذخیره شد');if(T=='bk'){bkChips();bkList()}})}});
+ else if(x=='pbk'){const sel=PB.filter(q=>q.on);if(!sel.length)return toast('سؤالی انتخاب نشده');chooseSubj(sj=>{sel.forEach(q=>{bank.push({id:uid(),t:Date.now(),subj:sj,item:mkItem(q)});put('bank',bank.at(-1))});syncSoon();toast(fa(sel.length)+' سؤال در بانک ذخیره شد');if(T=='bk'){bkChips();bkList()}})}});
 $('#md').addEventListener('change',e=>{const t=e.target;if(t.dataset&&t.dataset.pi!=null)PB[+t.dataset.pi].on=t.checked;else if(t.dataset&&t.dataset.pt!=null){PB[+t.dataset.pt].type=t.value;drawPB()}});
 $('#v').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.dataset.a=='bpaste')openPaste()});
 
@@ -698,7 +708,7 @@ let UNDO=[],VAR='',VOPT=true;
 const showU=()=>{const b=$('#ub');if(b)b.style.display=UNDO.length?'':'none'};
 function pushU(o){UNDO.push(o);if(UNDO.length>30)UNDO.shift();showU()}
 function undo(){const u=UNDO.pop();showU();if(!u)return;
- if(u.k=='bank'){bank.push(u.rec);put('bank',u.rec);if(T=='bk'){bkChips();bkList()}toast('از بانک برگردانده شد');return}
+ if(u.k=='bank'){u.rec.m=Date.now();bsyUndel(u.rec.id);bank.push(u.rec);put('bank',u.rec);syncSoon();if(T=='bk'){bkChips();bkList()}toast('از بانک برگردانده شد');return}
  if(u.e!=ex.id)return toast('این حذف مربوط به آزمون دیگری بود و برگردانده نشد');
  if(u.k=='row'){ex.rows.splice(Math.min(u.i,ex.rows.length),0,u.row);persist();T='ex';render();flash('r_'+u.row.id)}
  else{let r=ex.rows.find(x=>x.id==u.r.id);if(!r){r=u.r;ex.rows.splice(Math.min(u.ri,ex.rows.length),0,r)}r.items.splice(Math.min(u.i,r.items.length),0,u.it);persist();T='ex';render();flash('i_'+u.it.id)}
@@ -781,8 +791,8 @@ async function syncAll(force){if(!SYN()||syBusy||!COL().u||!db)return;if(!force&
     else{const cp=clone(o);cp.id=uid();cp.title+=' (نسخه‌ی دستگاه دیگر)';delete cp.st;cp.t=Date.now();exams.push(cp);await put('exams',cp);await push(e)}
     ch++}}
   for(const key in R){if(!key.startsWith('exam:'))continue;const id=key.slice(5),r=R[key];if(!r.del&&!pend.includes(id)&&!exams.some(k=>k.id==id))await apply(await pull(key))}
+  ch+=await syncBank(R);ch+=await syncSubs(R);
   {const bid=localStorage.ao_blank;if(bid){const be=exams.find(k=>k.id==bid);if(be&&!be.rows.length&&be.title==='آزمون جدید'&&!be.st&&exams.length>1){await del('exams',be.id);exams=exams.filter(k=>k.id!=bid);if(ex&&ex.id==bid)ex=exams[0];ch++}if(!be||exams.length>1)localStorage.removeItem('ao_blank')}}
-  const bch=await syncBank(R);if(bch&&T=='bk'){bkChips();bkList()}
   syStat('✅ آخرین همگام‌سازی: '+new Date().toLocaleTimeString('fa-IR'));
   if(ch){if(!exams.length)newExam();else if(!ex)ex=exams[0];render()}
  }catch(err){syStat(err.message=='oldscript'?'⚠️ کد اسکریپت گوگل قدیمی است؛ «کپی کد اسکریپت» را بزن، جایگزین کن و New version منتشر کن.':err.message=='key'?'⚠️ کلید قبول نشد؛ «کد اتصال» را دوباره وارد کن.':'⚠️ همگام‌سازی انجام نشد (اینترنت یا اتصال).')}finally{syBusy=false}}
@@ -813,70 +823,6 @@ $('#md').addEventListener('click',async e=>{const b=e.target.closest('button');i
   const e2=exams.find(k=>k.id==dr.exId);if(e2&&e2!==ex){ex=e2;localStorage.ao_cur=e2.id;render()}
   const f=dr.editId?find(dr.editId):null;
   ED={type:dr.type,d:dr.d,edit:f?f.it:null,row:f?f.r.id:(dr.row&&ex.rows.some(r=>r.id==dr.row)?dr.row:null),bank:dr.bank&&bank.some(k=>k.id==dr.bank)?dr.bank:null,pre:dr.pre||''};rerenderEd()}});
-
-//#BKSYNC-START
-// ---- question-bank sync: 32 shards on the same Google Sheet; every question is merged by its last-modified time,
-// ---- deletions travel as tombstones, so a deleted question never comes back from the other device.
-const BKN=32,bkSh=id=>{let h=0;for(const c of String(id))h=(h*31+c.charCodeAt(0))>>>0;return h%BKN},bkEff=b=>b.m||b.t||0,
- bkSt=()=>{try{return JSON.parse(localStorage.ao_bkst||'{}')}catch(e){return{}}},bkStSet=o=>localStorage.ao_bkst=JSON.stringify(o);
-async function syncBank(R){
- const st=bkSt();st.sh=st.sh||{};let changed=0;
- for(let s=0;s<BKN;s++){
-  const key='bk:'+s,r=R[key]&&!R[key].del?R[key]:null,ss=st.sh[s]||{};
-  const fpOf=()=>{let n=0,mx=0,tn=0,tm=0;for(const b of bank)if(bkSh(b.id)==s){n++;mx=Math.max(mx,bkEff(b))}const tb=bkTb();for(const id in tb)if(bkSh(id)==s){tn++;tm=Math.max(tm,tb[id])}return n+':'+mx+':'+tn+':'+tm};
-  const remoteChanged=!!r&&r.t!==ss.rt,localDirty=fpOf()!==ss.fp;
-  if(!remoteChanged&&!localDirty)continue;
-  const tb0=bkTb();
-  if(!r&&!bank.some(b=>bkSh(b.id)==s)&&!Object.keys(tb0).some(id=>bkSh(id)==s))continue;
-  syStat('⏳ همگام‌سازی بانک سؤال… '+fa(s+1)+' از '+fa(BKN));
-  let needPush=!r||(localDirty&&!remoteChanged);
-  if(remoteChanged){
-   const x=await syCall('a=sget&key='+encodeURIComponent(key)),o=await decodeData(x.code),loc=new Map(),tAdd={},tRem=[];
-   bank.forEach(b=>{if(bkSh(b.id)==s)loc.set(b.id,b)});
-   for(const rec of o.r||[]){
-    const l=loc.get(rec.id),lt=tb0[rec.id]||0,rm=bkEff(rec);
-    if(l){
-     if(rm>bkEff(l)){legacy(rec.item);rec.u=Math.max(rec.u||0,l.u||0);const i=bank.indexOf(l);if(i>=0)bank[i]=rec;loc.set(rec.id,rec);await put0('bank',rec);changed++}
-     else if(rm<bkEff(l))needPush=true;
-     else if((rec.u||0)>(l.u||0)){l.u=rec.u;await put0('bank',l)}
-    }else if(lt&&rm<=lt){needPush=true}
-    else{legacy(rec.item);bank.push(rec);loc.set(rec.id,rec);if(lt)tRem.push(rec.id);await put0('bank',rec);changed++}
-   }
-   for(const id in o.d||{}){
-    const dt=o.d[id],l=loc.get(id),lt=tb0[id]||0;
-    if(l){
-     if(dt>=bkEff(l)){const i=bank.indexOf(l);if(i>=0)bank.splice(i,1);loc.delete(id);await del0('bank',id);tAdd[id]=dt;changed++}
-     else needPush=true;
-    }else if(dt>lt)tAdd[id]=dt;
-    else if(dt<lt)needPush=true;
-   }
-   const rIds=new Set((o.r||[]).map(q=>q.id)),dIds=new Set(Object.keys(o.d||{}));
-   for(const id of loc.keys())if(!rIds.has(id)&&!dIds.has(id))needPush=true;
-   for(const id in tb0)if(bkSh(id)==s&&!rIds.has(id)&&!dIds.has(id)&&!tRem.includes(id))needPush=true;
-   if(Object.keys(tAdd).length||tRem.length){const t=bkTb();Object.assign(t,tAdd);tRem.forEach(id=>delete t[id]);bkTbSet(t)}
-  }
-  if(needPush){
-   const fpNow=fpOf(),mine=bank.filter(b=>bkSh(b.id)==s),tn=bkTb(),d={};for(const id in tn)if(bkSh(id)==s)d[id]=tn[id];
-   const t=Math.max(Date.now(),(r?r.t:0)+1),res=await syCall('',{a:'sput',key,t,del:0,data:await encodeData({v:1,r:mine,d})});
-   if(res.stale){bkStSet(st);continue}
-   ss.rt=t;ss.fp=fpNow;
-  }else{ss.rt=r.t;ss.fp=fpOf()}
-  st.sh[s]=ss;bkStSet(st);
- }
- // list of subjects (درس‌ها): the newest version wins
- {const r=R['bsubs']&&!R['bsubs'].del?R['bsubs']:null,ss=st.subs||{},lt=+localStorage.ao_subst||0,rc=!!r&&r.t!==ss.rt,ld=lt>(ss.lt||0);
-  if(rc||ld||(!r&&SUBS.length)){
-   let push=!r||(ld&&!rc);
-   if(rc){const x=await syCall('a=sget&key=bsubs'),o=await decodeData(x.code),rl=o.l||[];
-    if(!lt){const u=[...new Set([...rl,...SUBS])];push=u.length!==rl.length;SUBS=u;localStorage.ao_subs=JSON.stringify(SUBS);if(!push)localStorage.ao_subst=o.t||r.t}
-    else if((o.t||0)>lt){SUBS=rl;localStorage.ao_subs=JSON.stringify(SUBS);localStorage.ao_subst=o.t;changed++;push=false}
-    else push=true}
-   if(push){const t=Math.max(Date.now(),(r?r.t:0)+1),L2=+localStorage.ao_subst||Date.now();localStorage.ao_subst=L2;
-    const res=await syCall('',{a:'sput',key:'bsubs',t,del:0,data:await encodeData({l:SUBS,t:L2})});if(!res.stale)st.subs={rt:t,lt:L2}}
-   else st.subs={rt:r.t,lt:+localStorage.ao_subst||0};
-   bkStSet(st)}}
- return changed}
-//#BKSYNC-END
 
 // ================= EXAM CHECK · AUTO BAREM · BUILD FROM BANK · ANSWER KEY & BUBBLE SHEET =================
 const shufA=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
@@ -925,7 +871,7 @@ function mGen(){if(!bank.length)return toast('بانک سؤال خالی است'
 function genGo(){const l=gSel(),picked=[];let short=0;
  for(const t of TORD){const want=+($('.gn[data-t='+t+']').value)||0;if(!want)continue;const pool=shufA(l.filter(b=>b.item.type==t)).sort((a,b)=>(a.u||0)-(b.u||0));if(want>pool.length)short+=want-pool.length;picked.push(...pool.slice(0,want))}
  if(!picked.length)return toast('تعداد سؤال‌ها را مشخص کن');
- const rows=picked.map(b=>{b.u=(b.u||0)+1;put('bank',b,1);const it=clone(b.item);it.id=uid();return{id:uid(),title:'',score:0,items:[it]}});
+ const rows=picked.map(b=>{b.u=(b.u||0)+1;put('bank',b);const it=clone(b.item);it.id=uid();return{id:uid(),title:'',score:0,items:[it]}});
  if(document.querySelector('input[name=gd]:checked').value=='new'){ex={id:uid(),title:'آزمون تصادفی',rows,t:Date.now()};exams.push(ex);localStorage.ao_cur=ex.id;put('exams',ex)}else ex.rows.push(...rows);
  if($('#gb').checked)autoBarem(ex,+$('#gbt').value||20,'item');
  persist();hideM();T='ex';render();toast(fa(rows.length)+' سؤال اضافه شد'+(short?' ('+fa(short)+' سؤال کمتر از درخواست، چون در بانک نبود)':''))}
@@ -939,7 +885,7 @@ function keyHtml(){const f=flatItems(ex),half=Math.ceil(f.length/2),cell=x=>x?`<
 function bubbleHtml(){const f=flatItems(ex).filter(x=>x.it.type=='mc'||x.it.type=='tf');if(!f.length)return'';
  const bs=x=>x.it.type=='mc'?x.it.opts.map((_,i)=>`<span class="bub">${fa(i+1)}</span>`).join(''):'<span class="bub">ص</span><span class="bub">غ</span>';
  return(ex.vl?`<div style="text-align:center;font-weight:700">نسخه‌ی ${ex.vl}</div>`:'')+`<div style="text-align:center;font-weight:700">پاسخ‌برگ — ${esc(ex.title)}</div><div style="margin:8px 0">نام و نام خانوادگی: ……………………………… &nbsp; کلاس: ………………</div><div style="font-size:.85em;margin-bottom:8px">گزینه‌ی صحیح را کامل پر کنید.</div><div class="bg">${f.map(x=>`<div class="be"><b>${keyNo(x)}</b> ${bs(x)}</div>`).join('')}</div>`}
-function printDoc(h,title){$('#pp').innerHTML=`<div class="paper" style="--ls:${LSV()};line-height:${LSV()}">${h}</div>`;const o=document.title;document.title=title;pgStyle();setTimeout(()=>{print();document.title=o;pgStyle(true)},200)}
+function printDoc(h,title){$('#pp').innerHTML=`<div class="paper" style="--ls:${LSV()};line-height:${LSV()};font-size:${FS()}pt">${h}</div>`;const o=document.title;document.title=title;pgStyle();setTimeout(()=>{print();document.title=o;pgStyle(true)},200)}
 async function mkKeyDocx(){const d=await loadDocx();if(!d)return toast('کتابخانه‌ی Word لود نشد؛ اینترنت را بررسی کن');
  try{const FN={ascii:'B Nazanin',cs:'B Nazanin',hAnsi:'B Nazanin',eastAsia:'B Nazanin'},R=(t,b,col)=>new d.TextRun({text:t,font:FN,size:26,sizeComplexScript:26,rightToLeft:true,bold:!!b,boldComplexScript:!!b,color:col}),W=[1400,3703,1400,3703],
   P=(t,b,col)=>new d.Paragraph({alignment:d.AlignmentType.CENTER,bidirectional:true,children:[R(t,b,col)]}),C=(t,i,b,col,fill)=>new d.TableCell({width:{size:W[i],type:d.WidthType.DXA},shading:fill?{fill,type:d.ShadingType.CLEAR,color:'auto'}:undefined,children:[P(t,b,col)]});
@@ -965,7 +911,7 @@ const nk=n=>String(n).split(/[\s\u200c]+/).filter(Boolean).map(nz).sort().join('
 const parseNames=t=>[...new Set(String(t).split(/\n/).map(x=>x.replace(/^\s*[0-9۰-۹٠-٩]+\s*[\.\)\-–:]\s*/,'').trim()).filter(Boolean))];
 function mRos(id){const L=ROS(),cur=id?L.find(x=>x.id==id):null;
  showM(`<h3>لیست دانش‌آموزان</h3>${L.map(l=>`<div class="it"><span class="pv"><b>${esc(l.name)}</b> · ${fa(l.names.length)} نفر</span><button data-x="rosed" data-n="${l.id}">✎</button><button data-x="rosdel" data-n="${l.id}">🗑</button></div>`).join('')||'<div class="em">هنوز لیستی نیست.</div>'}
- <h3 style="margin-top:12px">${cur?'ویرایش لیست':'لیست جدید'}</h3><input id="ro_nm" style="width:100%" placeholder="نام کلاس (مثلاً هشتم ۱)" value="${esc(cur?cur.name:'')}"><label>اسم‌ها؛ هر اسم در یک خط (می‌توانی از Word یا Excel کپی کنی)</label><textarea id="ro_tx" rows="8" style="width:100%;background:var(--bg);color:inherit;border:1px solid var(--ln);border-radius:10px;padding:8px">${esc(cur?cur.names.join('\n'):'')}</textarea>
+ <h3 style="margin-top:12px">${cur?'ویرایش لیست':'لیست جدید'}</h3><input id="ro_nm" style="width:100%" placeholder="نام کلاس (مثلاً هشتم ۱)" value="${esc(cur?cur.name:'')}"><label>اسم‌ها؛ هر اسم در یک خط (می‌توانی از Word یا Excel کپی کنی)</label><textarea id="ro_tx" rows="8" style="width:100%;background:var(--bg);color:inherit;border:1px solid var(--ln);border-radius:10px;padding:8px">${esc(cur?cur.names.join('\n'):'')}</textarea>${roTools()}
  <div class="ft"><button class="p" data-x="rossv" data-n="${id||''}">ذخیره</button><button data-x="cl">بستن</button></div>`)}
 function rosCard(exm,L){const ro=ROS().find(x=>x.id==(exm.ol||{}).ros);if(!ro)return'';const got=L.map(x=>nk(x.r.name)),known=ro.names.map(nk),miss=ro.names.filter(n=>!got.includes(nk(n))),extra=L.filter(x=>!known.includes(nk(x.r.name)));RS.miss=miss;
  return `<div class="card"><h3>حضور و غیاب — ${esc(ro.name)}</h3><p>${fa(ro.names.length-miss.length)} از ${fa(ro.names.length)} نفر نتیجه داده‌اند.</p>${miss.length?`<b>ارسال نکرده‌اند (${fa(miss.length)}):</b><div>${miss.map(esc).join('، ')}</div><div class="r"><button data-a="romiss">📋 کپی فهرست</button></div>`:'<b style="color:var(--ac)">✅ همه نتیجه داده‌اند</b>'}${extra.length?`<p style="color:var(--dg)">⚠️ این نام‌ها در لیست نیستند (شاید غلط املایی): ${extra.map(x=>esc(x.r.name)).join('، ')}</p>`:''}</div>`}
@@ -977,86 +923,209 @@ $('#md').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
  else if(x=='rosdel'){if(confirm('این لیست حذف شود؟')){rosSave(ROS().filter(l=>l.id!=n));mRos();if(T=='ol')render()}}
  else if(x=='rossv'){const nm=$('#ro_nm').value.trim(),names=parseNames($('#ro_tx').value);if(!nm||!names.length)return toast('نام کلاس و حداقل یک اسم را بنویس');const L=ROS(),c=n&&L.find(l=>l.id==n);if(c){c.name=nm;c.names=names}else L.push({id:uid(),name:nm,names});rosSave(L);toast(fa(names.length)+' اسم ذخیره شد');mRos();if(T=='ol')render()}});
 
-//#AGG-START
-// ================= CLASS REPORT (several exams → one table → Excel) =================
-let AG={ros:'',ex:null,sc:'20',zero:false,A:[]};
-const agFirst=(k,A)=>{const t=A.filter(r=>r.exId==k.id).map(r=>r.t1||r.t0||0).filter(Boolean);return t.length?Math.min(...t):k.t||0};
-function agCalc(){
- const A=AG.A,sel=exams.filter(k=>AG.ex.includes(k.id)).sort((a,b)=>agFirst(a,A)-agFirst(b,A)),ro=ROS().find(x=>x.id==AG.ros),mp=new Map(),order=[];
- if(ro)ro.names.forEach(n=>{const key=nk(n);if(!mp.has(key)){mp.set(key,{name:n,v:{},x:false});order.push(key)}});
- let pend=0;
- for(const k of sel)for(const r of A.filter(q=>q.exId==k.id)){
-  const g=gradeRes(r,k);if(!(g.max>0))continue;if(g.pend&&(k.ol||{}).auto!==false)pend++;
-  const key=nk(r.name);let s=mp.get(key);if(!s){s={name:r.name,v:{},x:!!ro};mp.set(key,s);order.push(key)}
-  const v=+(AG.sc=='raw'?g.tot:g.tot/g.max*(AG.sc=='100'?100:20)).toFixed(2);
-  if(s.v[k.id]==null||v>s.v[k.id])s.v[k.id]=v}
- let rows=order.map(key=>mp.get(key));
- if(!ro)rows.sort((a,b)=>a.name.localeCompare(b.name,'fa'));else rows=[...rows.filter(q=>!q.x),...rows.filter(q=>q.x)];
- const mean=a=>a.length?+(a.reduce((p,q)=>p+q,0)/a.length).toFixed(2):null;
- rows.forEach(s=>{s.vals=sel.map(k=>s.v[k.id]!=null?s.v[k.id]:(AG.zero?0:null));s.avg=mean(s.vals.filter(v=>v!=null))});
- return{sel,rows,ro,pend,extra:rows.filter(q=>q.x).length,cav:sel.map((k,i)=>mean(rows.map(s=>s.vals[i]).filter(v=>v!=null))),call:mean(rows.map(s=>s.avg).filter(v=>v!=null))}}
-function agDraw(){const el=$('#ag_pv');if(!el)return;const C=agCalc();
- if(!C.sel.length){el.innerHTML='<div class="em">حداقل یک آزمون را انتخاب کن.</div>';return}
- const f=v=>v==null?'—':r2(v);
- el.innerHTML=`<p style="color:var(--ac);font-weight:700">${fa(C.rows.length)} نفر · ${fa(C.sel.length)} آزمون · میانگین کلاس: ${f(C.call)}</p>`+
-  (C.pend?`<p style="color:var(--dg)">⚠️ ${fa(C.pend)} نتیجه هنوز تصحیح دستی نشده؛ نمره‌ی سؤال‌های تصحیح‌نشده صفر حساب شده است.</p>`:'')+
-  (C.extra?`<p style="color:var(--dg)">⚠️ ${fa(C.extra)} نام در لیست نبود و آخر جدول آمده است (شاید غلط املایی).</p>`:'')+
-  `<div style="overflow:auto;max-height:46vh;border-radius:10px"><table class="ag"><thead><tr><th>#</th><th>نام</th>${C.sel.map(k=>`<th>${esc(k.title)}</th>`).join('')}<th>میانگین</th></tr></thead><tbody>`+
-  C.rows.map((s,i)=>`<tr${s.x?' style="color:var(--dg)"':''}><td>${fa(i+1)}</td><td>${esc(s.name)}</td>${s.vals.map(v=>`<td>${f(v)}</td>`).join('')}<td><b>${f(s.avg)}</b></td></tr>`).join('')+
-  `</tbody><tfoot><tr><td></td><td>میانگین کلاس</td>${C.cav.map(v=>`<td>${f(v)}</td>`).join('')}<td>${f(C.call)}</td></tr></tfoot></table></div>`+
-  (AG.sc=='raw'?'<small>نمره‌ی خام: اگر بارم آزمون‌ها فرق دارد، میانگین معنی‌دار نیست؛ «از ۲۰» یا «درصد» را بزن.</small>':'')}
-async function mAgg(){
- const A=(await all('results')).filter(r=>!String(r.id).startsWith('stu:')),have=exams.filter(k=>A.some(r=>r.exId==k.id));AG.A=A;
- if(!have.length)return toast('هنوز نتیجه‌ای وارد نشده است');
- AG.ex=AG.ex?AG.ex.filter(id=>have.some(k=>k.id==id)):have.map(k=>k.id);if(!AG.ex.length)AG.ex=have.map(k=>k.id);
- if(AG.ros&&!ROS().some(x=>x.id==AG.ros))AG.ros='';
- showM(`<h3>کارنامه‌ی تجمیعی کلاس</h3><label for="ag_ro">لیست دانش‌آموزان</label><select id="ag_ro" class="agi" style="width:100%"><option value="">همه‌ی اسم‌های موجود در نتایج</option>${ROS().map(l=>`<option value="${l.id}" ${AG.ros==l.id?'selected':''}>${esc(l.name)} (${fa(l.names.length)} نفر)</option>`).join('')}</select>
-  <label>آزمون‌ها (به ترتیب تاریخ آزمون در جدول می‌آیند)</label><div style="max-height:150px;overflow:auto;border:1px solid var(--ln);border-radius:10px;padding:4px 10px">${have.map(k=>`<label style="margin:4px 0;color:var(--tx)"><input type="checkbox" class="agi" data-ag="${k.id}" ${AG.ex.includes(k.id)?'checked':''}> ${esc(k.title)} <small style="display:inline">(${fa(A.filter(r=>r.exId==k.id).length)} نتیجه)</small></label>`).join('')}</div>
-  <label for="ag_sc">نمره‌ها به صورت</label><select id="ag_sc" class="agi"><option value="20" ${AG.sc=='20'?'selected':''}>از ۲۰</option><option value="100" ${AG.sc=='100'?'selected':''}>از ۱۰۰ (درصد)</option><option value="raw" ${AG.sc=='raw'?'selected':''}>نمره‌ی خام آزمون</option></select>
-  <label style="color:var(--tx)"><input type="checkbox" id="ag_z" class="agi" ${AG.zero?'checked':''}> آزمونی که دانش‌آموز نداده، صفر حساب شود (وگرنه در میانگین نمی‌آید)</label>
-  <div id="ag_pv"></div><small>اگر دانش‌آموزی یک آزمون را چند بار داده باشد، بهترین نمره‌اش حساب می‌شود. ستون میانگین در Excel فرمول است و اگر نمره‌ای را دستی عوض کنی خودش به‌روز می‌شود.</small>
-  <div class="ft"><button class="p" data-g="x">⬇️ Excel (xlsx)</button><button data-g="c">CSV</button><button data-g="cl">بستن</button></div>`);
- agDraw()}
-function agXlsx(C){
- const E=new TextEncoder(),X=v=>String(v==null?'':v).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'),
-  L=n=>{let q='';n++;while(n){const m=(n-1)%26;q=String.fromCharCode(65+m)+q;n=(n-m-1)/26|0}return q},
-  tc=(r,c,t,st)=>`<c r="${L(c)}${r}" s="${st}" t="inlineStr"><is><t xml:space="preserve">${X(t)}</t></is></c>`,
-  nc=(r,c,v,st)=>v==null?`<c r="${L(c)}${r}" s="${st}"/>`:`<c r="${L(c)}${r}" s="${st}"><v>${v}</v></c>`,
-  fc=(r,c,f,v,st)=>v==null?`<c r="${L(c)}${r}" s="${st}" t="str"><f>${f}</f><v></v></c>`:`<c r="${L(c)}${r}" s="${st}"><f>${f}</f><v>${v}</v></c>`,
-  n=C.sel.length,ac=n+2,last=C.rows.length+1;
- let rows='<row r="1" ht="30" customHeight="1">'+tc(1,0,'ردیف',1)+tc(1,1,'نام و نام خانوادگی',1)+C.sel.map((k,i)=>tc(1,2+i,k.title,1)).join('')+tc(1,ac,'میانگین',1)+'</row>';
- C.rows.forEach((s,i)=>{const r=i+2;rows+=`<row r="${r}">`+nc(r,0,i+1,6)+tc(r,1,s.name,2)+s.vals.map((v,j)=>nc(r,2+j,v,3)).join('')+fc(r,ac,`IFERROR(AVERAGE(${L(2)}${r}:${L(n+1)}${r}),"")`,s.avg,4)+'</row>'});
- if(C.rows.length){const r=last+1;rows+=`<row r="${r}">`+tc(r,0,'',5)+tc(r,1,'میانگین کلاس',5)+C.cav.map((v,j)=>fc(r,2+j,`IFERROR(AVERAGE(${L(2+j)}2:${L(2+j)}${last}),"")`,v,4)).join('')+fc(r,ac,`IFERROR(AVERAGE(${L(ac)}2:${L(ac)}${last}),"")`,C.call,4)+'</row>'}
- const NS='xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"',H='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n',
-  bd='<border><left style="thin"><color rgb="FFBBBBBB"/></left><right style="thin"><color rgb="FFBBBBBB"/></right><top style="thin"><color rgb="FFBBBBBB"/></top><bottom style="thin"><color rgb="FFBBBBBB"/></bottom><diagonal/></border>',
-  F={
-  '[Content_Types].xml':H+'<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>',
-  '_rels/.rels':H+'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>',
-  'xl/workbook.xml':H+`<workbook ${NS} xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="کارنامه تجمیعی" sheetId="1" r:id="rId1"/></sheets></workbook>`,
-  'xl/_rels/workbook.xml.rels':H+'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>',
-  'xl/styles.xml':H+`<styleSheet ${NS}><numFmts count="1"><numFmt numFmtId="164" formatCode="0.00"/></numFmts><fonts count="3"><font><sz val="11"/><name val="Tahoma"/></font><font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Tahoma"/></font><font><b/><sz val="11"/><name val="Tahoma"/></font></fonts><fills count="4"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF1E9E78"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFFBF5E6"/><bgColor indexed="64"/></patternFill></fill></fills><borders count="2"><border><left/><right/><top/><bottom/><diagonal/></border>${bd}</borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="7"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center" wrapText="1"/></xf><xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf><xf numFmtId="164" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center"/></xf><xf numFmtId="164" fontId="2" fillId="3" borderId="1" xfId="0" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center"/></xf><xf numFmtId="0" fontId="2" fillId="3" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf><xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="center"/></xf></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`,
-  'xl/worksheets/sheet1.xml':H+`<worksheet ${NS}><sheetViews><sheetView rightToLeft="1" workbookViewId="0"><pane xSplit="2" ySplit="1" topLeftCell="C2" activePane="bottomRight" state="frozen"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight="18"/><cols><col min="1" max="1" width="7" customWidth="1"/><col min="2" max="2" width="28" customWidth="1"/><col min="3" max="${n+2}" width="16" customWidth="1"/><col min="${n+3}" max="${n+3}" width="12" customWidth="1"/></cols><sheetData>${rows}</sheetData></worksheet>`};
- return new Blob([zipBlob(Object.entries(F).map(([name,x])=>({name,data:E.encode(x)})))],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'})}
-$('#v').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.dataset.a=='agg')mAgg()});
-$('#md').addEventListener('change',e=>{const t=e.target;if(!t.classList||!t.classList.contains('agi'))return;
- if(t.id=='ag_ro')AG.ros=t.value;else if(t.id=='ag_sc')AG.sc=t.value;else if(t.id=='ag_z')AG.zero=t.checked;
- else if(t.dataset.ag){AG.ex=AG.ex.filter(i=>i!=t.dataset.ag);if(t.checked)AG.ex.push(t.dataset.ag)}agDraw()});
-$('#md').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!b.dataset.g)return;const g=b.dataset.g;
- if(g=='cl')return hideM();
- const C=agCalc();if(!C.sel.length)return toast('حداقل یک آزمون را انتخاب کن');
- const nm=('کارنامه تجمیعی'+(C.ro?' - '+C.ro.name:'')).replace(/[\\/:*?"<>|]/g,'');
- if(g=='x')saveBlob(agXlsx(C),nm+'.xlsx');
- else if(g=='c'){const q=v=>'"'+String(v).replace(/"/g,'""')+'"',z=v=>v==null?'':v,
-  ln=[['ردیف','نام و نام خانوادگی',...C.sel.map(k=>k.title),'میانگین'].map(q).join(',')];
-  C.rows.forEach((s,i)=>ln.push([i+1,q(s.name),...s.vals.map(z),z(s.avg)].join(',')));
-  ln.push(['',q('میانگین کلاس'),...C.cav.map(z),z(C.call)].join(','));
-  saveBlob(new Blob(['\ufeff'+ln.join('\r\n')],{type:'text/csv'}),nm+'.csv')}});
-// ---- UI font size (☰ menu)
-const setFs=v=>{v=Math.max(12,Math.min(26,+v||16));document.documentElement.style.setProperty('--fs',v+'px');localStorage.ao_fs=v;const e=$('#fsv');if(e)e.textContent=fa(v)};
-$('#md').addEventListener('input',e=>{if(e.target.id=='fsr')setFs(e.target.value)});
-$('#md').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.dataset.a=='fs0'){document.documentElement.style.removeProperty('--fs');localStorage.removeItem('ao_fs');const r=$('#fsr'),v=$('#fsv');if(r)r.value=16;if(v)v.textContent=fa(16)}});
-//#AGG-END
+document.documentElement.style.setProperty('--z',localStorage.ao_uiz||'1');
+$('#md').addEventListener('change',e=>{if(e.target.id=='uiz'){localStorage.ao_uiz=e.target.value;document.documentElement.style.setProperty('--z',e.target.value)}});
+// ================= BANK SYNC (per question) + CLASS GRADEBOOK (online) =================
+const bm=b=>b.m||b.t||0,bsPend=()=>{try{return JSON.parse(localStorage.ao_sybdel||'{}')}catch(e){return{}}};
+function bsyDel(id){if(!SYN())return;const p=bsPend();p[id]=Date.now();localStorage.ao_sybdel=JSON.stringify(p);syncSoon()}
+function bsyUndel(id){const p=bsPend();delete p[id];localStorage.ao_sybdel=JSON.stringify(p)}
+async function syncBank(R){const strip_=b=>{const c={...b};delete c.st;return c},
+  push=async b=>{await syCall('',{a:'sput',key:'bank:'+b.id,t:bm(b),del:0,data:await encodeData(strip_(b))});b.st=bm(b);await put('bank',b)},
+  pull=async key=>{const x=await syCall('a=sget&key='+encodeURIComponent(key)),o=await decodeData(x.code);o.st=bm(o);return o},
+  bp=bsPend(),jobs=[];
+ for(const id of Object.keys(bp)){await syCall('',{a:'sput',key:'bank:'+id,t:bp[id],del:1,data:''});delete bp[id];localStorage.ao_sybdel=JSON.stringify(bp)}
+ for(const b of [...bank]){const r=R['bank:'+b.id],m=bm(b);
+  if(!r){jobs.push(()=>push(b));continue}
+  const st=b.st||0,lc=m>st,rc=r.t>st;
+  if(r.t===m&&!r.del){if(b.st!==m){b.st=m;put('bank',b)}continue}
+  if(!lc&&rc){if(r.del){bank=bank.filter(k=>k.id!=b.id);jobs.push(()=>del('bank',b.id))}
+   else jobs.push(async()=>{const o=await pull('bank:'+b.id);o.u=Math.max(o.u||0,b.u||0);const i=bank.findIndex(k=>k.id==b.id);if(i>=0)bank[i]=o;await put('bank',o)});continue}
+  if(lc&&!rc){jobs.push(()=>push(b));continue}
+  if(lc&&rc){if(r.del){jobs.push(()=>push(b));continue}
+   jobs.push(async()=>{const o=await pull('bank:'+b.id);
+    if(r.t>m){const cp=clone(b);cp.id=uid();delete cp.st;cp.m=Date.now();bank.push(cp);await put('bank',cp);const i=bank.findIndex(k=>k.id==b.id);if(i>=0)bank[i]=o;await put('bank',o)}
+    else{const cp=clone(o);cp.id=uid();delete cp.st;cp.m=Date.now();bank.push(cp);await put('bank',cp);await push(b)}})}}
+ for(const key in R){if(!key.startsWith('bank:'))continue;const id=key.slice(5),r=R[key];if(!r.del&&!bank.some(k=>k.id==id)&&!(id in bp))jobs.push(async()=>{const o=await pull(key);bank.push(o);await put('bank',o)})}
+ let n=0;const q=[...jobs];await Promise.all([0,1,2,3].map(async()=>{while(q.length){await q.shift()();n++;if(jobs.length>6&&n%5==0)syStat('⏳ بانک سؤال: '+fa(n)+' از '+fa(jobs.length))}}));return n}
+async function syncSubs(R){const r=R['subs'],lt_=+localStorage.ao_subt||0;
+ if(r&&!r.del&&r.t>lt_){const x=await syCall('a=sget&key=subs');try{const a=JSON.parse(x.code);if(Array.isArray(a)){SUBS=a;localStorage.ao_subs=JSON.stringify(a);localStorage.ao_subt=r.t;return 1}}catch(e){}}
+ else if(!r||lt_>r.t){const t=lt_||Date.now();await syCall('',{a:'sput',key:'subs',t,del:0,data:JSON.stringify(SUBS)});localStorage.ao_subt=t}
+ return 0}
+// ---- class gradebook
+let GB=null;
+async function gbData(rid){const ro=ROS().find(l=>l.id==rid);if(!ro)return null;const rs=(await all('results')).filter(r=>!String(r.id).startsWith('stu:')),cols=[];
+ for(const e of exams){const mine=rs.filter(r=>r.exId==e.id&&ro.names.some(n=>nk(n)==nk(r.name)));if(mine.length)cols.push({e,rs:mine})}
+ cols.sort((a,b)=>(a.e.t||0)-(b.e.t||0));
+ const cells=ro.names.map(n=>cols.map(c=>{const m=c.rs.filter(r=>nk(r.name)==nk(n)).sort((a,b)=>(b.t1||0)-(a.t1||0))[0];if(!m)return null;const g=gradeRes(m,c.e);return{tot:g.tot,max:g.max}}));
+ return{ro,cols,cells}}
+function gbRows(){const u=$('#gb_u').value,z=$('#gb_z').checked,D=GB,use=D.cols.map((_,j)=>{const c=document.querySelector('.gbe[data-j="'+j+'"]');return c?c.checked:true}),
+  conv=c=>!c?null:u=='p'?(c.max?c.tot/c.max*100:0):(c.max?c.tot/c.max*20:0),
+  cols=D.cols.filter((_,j)=>use[j]),head=['نام',...cols.map(c=>c.e.title),'میانگین'];
+ const vals=D.ro.names.map((n,i)=>D.cells[i].filter((_,j)=>use[j]).map(conv)),avg=v=>{const g=v.filter(x=>x!=null),d=z?v.length:g.length;return d?g.reduce((a,b)=>a+b,0)/d:null},r2=x=>x==null?null:+x.toFixed(2);
+ const body=D.ro.names.map((n,i)=>[n,...vals[i].map(r2),r2(avg(vals[i]))]),colAvg=cols.map((_,j)=>{const g=vals.map(v=>v[j]).filter(x=>x!=null);return g.length?r2(g.reduce((a,b)=>a+b,0)/g.length):null});
+ return{head,body,foot:['میانگین کلاس',...colAvg,r2(avg(colAvg))]}}
+function gbDraw(){const {head,body,foot}=gbRows(),c=v=>v==null?'—':sf(v);
+ $('#gb_t').innerHTML=`<div style="overflow:auto"><table class="kt" style="min-width:100%"><thead><tr>${head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${body.map(r=>`<tr><td style="text-align:start">${esc(r[0])}</td>${r.slice(1).map((v,i,a)=>`<td${i==a.length-1?' style="font-weight:700"':''}>${c(v)}</td>`).join('')}</tr>`).join('')}<tr style="font-weight:700;background:#f3ecd6"><td style="text-align:start">${foot[0]}</td>${foot.slice(1).map(c_=>`<td>${c(c_)}</td>`).join('')}</tr></tbody></table></div>`}
+async function mGB(rid){if(!ROS().length)return toast('اول در تب «آنلاین» یک لیست دانش‌آموزان بساز');const cur=exams.find(k=>k.id==RS.ex),id=rid||(cur&&cur.ol&&cur.ol.ros)||ROS()[0].id;GB=await gbData(id);
+ if(!GB.cols.length)return toast('برای این لیست هنوز نتیجه‌ای وارد نشده است');
+ showM(`<h3>کارنامه‌ی تجمیعی کلاس</h3><div class="r"><select id="gb_r">${ROS().map(l=>`<option value="${l.id}" ${l.id==id?'selected':''}>${esc(l.name)}</option>`).join('')}</select><select id="gb_u"><option value="n">نمره از ۲۰</option><option value="p">درصد</option></select></div>
+ <div class="r"><label><input type="checkbox" id="gb_z"> غایب را صفر حساب کن</label></div><div class="r">${GB.cols.map((c,j)=>`<label><input type="checkbox" class="gbe" data-j="${j}" checked> ${esc(c.e.title)}</label>`).join('')}</div>
+ <div id="gb_t"></div><small style="color:var(--mu)">نمره‌ی تشریحی‌های تصحیح‌نشده صفر حساب شده است. اگر یک دانش‌آموز یک آزمون را چند بار داده، آخرین نتیجه می‌آید.</small>
+ <div class="ft"><button class="p" data-x="gbx">⬇️ Excel</button><button data-x="gbc">⬇️ CSV</button><button data-x="cl">بستن</button></div>`);gbDraw()}
+function xlsxBlob(rows){const X=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'),L=i=>{let s='';i++;while(i){const m=(i-1)%26;s=String.fromCharCode(65+m)+s;i=Math.floor((i-1)/26)}return s},H='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',E=new TextEncoder(),f=(n,t)=>({name:n,data:E.encode(t)});
+ const sheet=H+'<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView rightToLeft="1" workbookViewId="0"/></sheetViews><sheetData>'+rows.map((r,i)=>`<row r="${i+1}">`+r.map((v,j)=>{const ref=L(j)+(i+1);return v==null||v===''?'':typeof v=='number'?`<c r="${ref}"><v>${v}</v></c>`:`<c r="${ref}" t="inlineStr"><is><t xml:space="preserve">${X(v)}</t></is></c>`}).join('')+'</row>').join('')+'</sheetData></worksheet>';
+ const b=zipBlob([f('[Content_Types].xml',H+'<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>'),
+  f('_rels/.rels',H+'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'),
+  f('xl/workbook.xml',H+'<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Gradebook" sheetId="1" r:id="rId1"/></sheets></workbook>'),
+  f('xl/_rels/workbook.xml.rels',H+'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>'),
+  f('xl/worksheets/sheet1.xml',sheet)]);return new Blob([b],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'})}
+$('#v').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.dataset.a=='gbk')mGB()});
+$('#md').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const x=b.dataset.x;
+ if(x=='gbx'||x=='gbc'){const {head,body,foot}=gbRows(),rows=[head,...body,foot],nm='کارنامه تجمیعی - '+(GB.ro.name);
+  if(x=='gbx')saveBlob(xlsxBlob(rows),nm+'.xlsx');else saveBlob(new Blob(['\ufeff'+rows.map(r=>r.map(v=>v==null?'':'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n')],{type:'text/csv'}),nm+'.csv')}});
+$('#md').addEventListener('change',async e=>{const t=e.target;if(t.id=='gb_r'){GB=await gbData(t.value);mGB(t.value)}else if(t.id=='gb_u'||t.id=='gb_z'||(t.classList&&t.classList.contains('gbe')))gbDraw()});
 
 // ---------- start
+// ================= v21: TABS, HEADER (سربرگ), TABLE LAYOUT, PART BAREM, PDF NAMES =================
+const clampN=(v,a,b)=>Math.max(a,Math.min(b,v));
+function flushEx(){if(!ex||!db)return;clearTimeout(pt);ex.rows.forEach(r=>r.score=rowTotal(r));ex.t=Date.now();put('exams',ex);syncSoon()}
+function openIds(){let a=[];try{a=JSON.parse(localStorage.ao_tabs||'[]')}catch{}a=a.filter(id=>exams.some(e=>e.id==id));if(ex&&!a.includes(ex.id))a.push(ex.id);localStorage.ao_tabs=JSON.stringify(a);return a}
+function tabsDraw(){const el=$('#tabs');if(!el)return;const ids=openIds();el.innerHTML=ids.map(id=>{const e=exams.find(k=>k.id==id);return `<span class="tab${e===ex?' on':''}" data-tab="${id}"><span class="tt">${esc(e.title||'بدون نام')}</span>${ids.length>1?`<b class="tx" data-tabx="${id}">×</b>`:''}</span>`}).join('')+'<button class="tab-add" data-tabadd="1" title="آزمون جدید">＋</button>'}
+function goEx(id){const e=exams.find(k=>k.id==id);if(!e)return;flushEx();ex=e;localStorage.ao_cur=id;VAR='';render();scrollTo(0,0)}
+function closeTab(id){let a=openIds();if(a.length<2)return;const i=a.indexOf(id);a=a.filter(x=>x!=id);localStorage.ao_tabs=JSON.stringify(a);if(ex.id==id)goEx(a[Math.min(i,a.length-1)]);else tabsDraw()}
+$('#tabs').addEventListener('click',e=>{const x=e.target.closest('[data-tabx]');if(x){closeTab(x.dataset.tabx);return}if(e.target.closest('[data-tabadd]')){flushEx();newExam();return}const t=e.target.closest('[data-tab]');if(t&&t.dataset.tab!=ex.id)goEx(t.dataset.tab)});
+$('#ttl').addEventListener('input',()=>{const t=$('#tabs .tab.on .tt');if(t)t.textContent=ex.title||'بدون نام'});
+// copy a question row into another exam
+let CPR=null;
+$('#v').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.dataset.a!='rcp')return;const r=ex.rows.find(x=>x.id==b.dataset.r);if(!r)return;CPR=r;const o=exams.filter(k=>k!==ex);
+ if(!o.length)return toast('اول یک آزمون دیگر بساز (دکمه‌ی ＋ بالای صفحه)');
+ showM(`<h3>کپی این سؤال به کدام آزمون؟</h3>${o.map(k=>`<div class="it"><span class="pv"><b>${esc(k.title)}</b> · ${fa(k.rows.length)} سؤال</span><button class="p" data-x="rcpto" data-n="${k.id}">کپی به این آزمون</button></div>`).join('')}<button data-x="cl">بستن</button>`)});
+$('#md').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.dataset.x!='rcpto'||!CPR)return;const k=exams.find(z=>z.id==b.dataset.n);if(!k)return;const c=clone(CPR);c.id=uid();c.items.forEach(i=>i.id=uid());k.rows.push(c);k.t=Date.now();put('exams',k);syncSoon();hideM();toast('به «'+k.title+'» کپی شد')});
+// ---- layout of main table
+function LYT(){const lt=ex.lt||{},lw=ex.lw||{},L=[];if(ex.cn!==false)L.push({k:'n',t:lt.n??'ردیف',w:+lw.n||9});L.push({k:'q',t:lt.q??'سوالات',w:0});if(ex.cb!==false)L.push({k:'b',t:lt.b??'بارم',w:+lw.b||12});(ex.xc||[]).forEach((x,i)=>L.push({k:'x',i,t:x.t||'',w:+x.w||10}));
+ let o=L.filter(c=>c.k!='q').reduce((s,c)=>s+c.w,0);if(o>72){const f=72/o;L.forEach(c=>{if(c.k!='q')c.w*=f});o=72}L.find(c=>c.k=='q').w=100-o;L.forEach(c=>c.w=+c.w.toFixed(2));return L}
+const rowMin=r=>(r.h!==undefined&&r.h!==''&&r.h!==null)?+r.h||0:+ex.rmh||0;
+const PBM=()=>ex.pb!==false,bmTxt=v=>ex.pbs=='w'?'('+(v<1?fa(Math.round(v*100))+' صدم':sf(v)+' نمره')+')':'('+sf(v)+')';
+function cellHtml(r,a){const s=r.items,t=r.title?`<div>${esc(r.title)}</div>`:'';if(s.length==1)return t+itemHtml(s[0],a);return t+s.map((it,i)=>`<div class="s">${PBM()&&it.score?`<span class="bm">${bmTxt(it.score)}</span>`:''}<b>${lt(i)})</b> ${itemHtml(it,a)}</div>`).join('')}
+function hdrHtml(h,ed){h=h||ex.hd;if(!h||!h.c||!h.c.length)return'';if(!ed&&h.on===false)return'';const tot=h.w.reduce((a,b)=>a+(+b||0),0)||1;
+ return `<table class="ht${h.bd===false&&!ed?'':' b'}"><colgroup>${h.w.map(w=>`<col style="width:${(w/tot*100).toFixed(2)}%">`).join('')}</colgroup>${h.c.map((row,ri)=>`<tr${h.h[ri]>0?` style="height:${h.h[ri]}mm"`:''}>${row.map((x,ci)=>x.hid?'':`<td${x.cs>1?` colspan="${x.cs}"`:''}${x.rs>1?` rowspan="${x.rs}"`:''}${ed?` data-r="${ri}" data-c="${ci}" class="${HS[0]==ri&&HS[1]==ci?'sel':''}"`:''} style="text-align:${{r:'right',l:'left',c:'center'}[x.a||'c']};${x.b?'font-weight:700;':''}${x.z?`font-size:${x.z}pt;`:''}">${esc(x.t).replace(/\n/g,'<br>')||(ed?'&nbsp;':'')}</td>`).join('')}</tr>`).join('')}</table>`}
+function paperHtml(a){const L=LYT();
+ return hdrHtml()+(ex.vl?`<div style="text-align:center;font-weight:700;margin-bottom:6px">نسخه‌ی ${ex.vl}</div>`:'')+`<table class="et${ex.hdr===false?' nr':''}"><colgroup>${L.map(c=>`<col style="width:${c.w}%">`).join('')}</colgroup><thead><tr>${L.map(c=>`<th>${esc(c.t)}</th>`).join('')}</tr></thead><tbody>${ex.rows.map((r,i)=>{const h=rowMin(r);return `<tr${h>0?` style="height:${h}mm"`:''}>${L.map(c=>c.k=='n'?`<td class="c">${fa(i+1)}</td>`:c.k=='q'?`<td data-q style="padding:4px ${CPV()}mm">${cellHtml(r,a)}</td>`:c.k=='b'?`<td class="c">${rowTotal(r)?sf(rowTotal(r)):''}</td>`:'<td></td>').join('')}</tr>`}).join('')}</tbody></table>`}
+const refPv=()=>{const p=$('#pv');if(p)p.innerHTML=withV(()=>paperHtml(AN))};
+const rhIn=r=>`<label class="rhl" title="حداقل ارتفاع این ردیف در برگه (میلی‌متر؛ خالی = خودکار)">ارتفاع <input type="number" min="0" max="250" data-rh="${r.id}" value="${r.h??''}" placeholder="خودکار" style="width:76px"></label>`;
+function hdCard(){const h=ex.hd;return `<div class="card"><h3>سربرگ برگه</h3><div class="r"><label><input type="checkbox" id="hd_on" ${h&&h.c&&h.on!==false?'checked':''} ${h&&h.c?'':'disabled'}> نمایش سربرگ بالای برگه</label></div><div class="r"><button class="p" data-lay="hded">✎ ${h&&h.c?'ویرایش':'ساخت'} سربرگ (جدول)</button></div><small style="color:var(--mu)">سربرگ یک جدول است: هر چه خواستی بنویس، ستون و ردیف اضافه/کم کن، خانه‌ها را ادغام یا تقسیم کن، اندازه‌ها را تنظیم کن و راست‌چین/وسط‌چین/چپ‌چین کن.</small></div>`}
+function layCard(){const L=LYT(),q=L.find(c=>c.k=='q'),lt=ex.lt||{},lw=ex.lw||{},rg=(id,v,mn,mx,cls,ix)=>`<input type="range" ${id?`id="${id}"`:''} ${cls?`class="${cls}" data-xi="${ix}"`:''} min="${mn}" max="${mx}" value="${v}" style="flex:1;min-width:90px;accent-color:var(--ac)">`;
+ return `<div class="card"><h3>جدول سؤال‌ها: ستون‌ها و ردیف‌ها</h3>
+ <div class="r" style="align-items:center"><label><input type="checkbox" id="ly_n" ${ex.cn!==false?'checked':''}> ستون شماره</label><input id="ly_tn" value="${esc(lt.n??'ردیف')}" style="width:100px">${ex.cn!==false?rg('ly_wn',+lw.n||9,4,20)+`<b id="ly_wnv">${fa(Math.round(+lw.n||9))}٪</b>`:''}</div>
+ <div class="r" style="align-items:center"><b>ستون سؤال‌ها</b><input id="ly_tq" value="${esc(lt.q??'سوالات')}" style="width:100px"><span style="color:var(--mu)">عرض: ${fa(Math.round(q.w))}٪ (باقی‌مانده)</span></div>
+ <div class="r" style="align-items:center"><label><input type="checkbox" id="ly_b" ${ex.cb!==false?'checked':''}> ستون بارم</label><input id="ly_tb" value="${esc(lt.b??'بارم')}" style="width:100px">${ex.cb!==false?rg('ly_wb',+lw.b||12,6,25)+`<b id="ly_wbv">${fa(Math.round(+lw.b||12))}٪</b>`:''}</div>
+ ${(ex.xc||[]).map((x,i)=>`<div class="r" style="align-items:center"><b>ستون اضافه</b><input class="xt" data-xi="${i}" value="${esc(x.t||'')}" placeholder="عنوان ستون" style="width:110px">${rg('',+x.w||10,4,30,'xw',i)}<b>${fa(Math.round(+x.w||10))}٪</b><button data-lay="xdel" data-xi="${i}">🗑</button></div>`).join('')}
+ <div class="r"><button data-lay="xadd">＋ ستون اضافه (مثلاً نمره‌ی کسب‌شده)</button></div>
+ <div class="r" style="align-items:center"><label for="rmh">حداقل ارتفاع هر ردیف:</label>${rg('rmh',+ex.rmh||0,0,80)}<b id="rmhv">${+ex.rmh?fa(ex.rmh)+' میلی‌متر':'خودکار'}</b></div><small style="color:var(--mu)">ارتفاع هر ردیف را جداگانه هم می‌شود در تب «آزمون» (کنار «جمع بارم» هر سؤال) تعیین کرد.</small>
+ <div class="r" style="align-items:center"><label><input type="checkbox" id="pb_on" ${PBM()?'checked':''}> نوشتن بارم کنار هر بخش (الف، ب، …) در ردیف‌های چندبخشی؛ جمعشان در ستون بارم</label><select id="pb_st"><option value="n" ${ex.pbs=='w'?'':'selected'}>شکل: (۰٫۲۵)</option><option value="w" ${ex.pbs=='w'?'selected':''}>شکل: (۲۵ صدم)</option></select></div></div>`}
+$('#v').addEventListener('input',e=>{const t=e.target;if(!t||!ex)return;let ch=0;
+ if(t.dataset.rh!==undefined){const r=ex.rows.find(x=>x.id==t.dataset.rh);if(r){r.h=t.value===''?'':clampN(+t.value||0,0,250);persist()}return}
+ if(t.id=='ly_tn'||t.id=='ly_tq'||t.id=='ly_tb'){ex.lt=ex.lt||{};ex.lt[t.id.slice(-1)]=t.value;ch=1}
+ else if(t.id=='ly_wn'||t.id=='ly_wb'){ex.lw=ex.lw||{};ex.lw[t.id.slice(-1)]=+t.value;$('#'+t.id+'v').textContent=fa(t.value)+'٪';ch=1}
+ else if(t.classList.contains('xt')){ex.xc[+t.dataset.xi].t=t.value;ch=1}
+ else if(t.classList.contains('xw')){ex.xc[+t.dataset.xi].w=+t.value;ch=1}
+ else if(t.id=='rmh'){ex.rmh=+t.value;$('#rmhv').textContent=+t.value?fa(t.value)+' میلی‌متر':'خودکار';ch=1}
+ if(ch){persist();refPv()}});
+$('#v').addEventListener('change',e=>{const t=e.target;if(!t||!ex)return;
+ if(t.id=='ly_n'){ex.cn=t.checked;persist();render()}else if(t.id=='ly_b'){ex.cb=t.checked;persist();render()}
+ else if(t.id=='pb_on'){ex.pb=t.checked;persist();refPv()}else if(t.id=='pb_st'){ex.pbs=t.value;persist();refPv()}
+ else if(t.id=='hd_on'){ex.hd.on=t.checked;persist();refPv()}
+ else if(t.classList&&t.classList.contains('xw')){render()}});
+$('#v').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!b.dataset.lay)return;const k=b.dataset.lay;
+ if(k=='xadd'){ex.xc=ex.xc||[];ex.xc.push({t:'نمره',w:10});persist();render()}
+ else if(k=='xdel'){ex.xc.splice(+b.dataset.xi,1);persist();render()}
+ else if(k=='hded')openHd()});
+// ---- header table model (HTML-like grid: covered cells have hid=1)
+let HD=null,HS=[0,0];
+const hcell=(t='',o={})=>({t,a:'c',b:0,z:0,cs:1,rs:1,hid:0,...o});
+function hAnchor(h,r,c){if(!h.c[r][c].hid)return[r,c];for(let i=0;i<=r;i++)for(let j=0;j<=c;j++){const x=h.c[i][j];if(!x.hid&&i+x.rs>r&&j+x.cs>c)return[i,j]}return[r,c]}
+function hAddRow(h,at){const n=h.c[0].length,row=[],done=new Set();for(let c=0;c<n;c++){let x=null;if(at>0&&at<h.c.length){const[ar,ac]=hAnchor(h,at-1,c),a=h.c[ar][ac];if(ar+a.rs>at)x=a}
+ if(x){if(!done.has(x)){x.rs++;done.add(x)}row.push(hcell('',{hid:1}))}else row.push(hcell(''))}h.c.splice(at,0,row);h.h.splice(at,0,0)}
+function hDelRow(h,r){if(h.c.length<2)return false;const n=h.c[0].length,seen=new Set();for(let c=0;c<n;c++){const x=h.c[r][c];if(x.hid){const[ar,ac]=hAnchor(h,r,c);if(ar<r){const a=h.c[ar][ac];if(!seen.has(a)){a.rs--;seen.add(a)}}}else if(x.rs>1){Object.assign(h.c[r+1][c],{...x,rs:x.rs-1,hid:0})}}h.c.splice(r,1);h.h.splice(r,1);return true}
+function hAddCol(h,at){const n=h.c[0].length,done=new Set();h.c.forEach((row,r)=>{let x=null;if(at>0&&at<n){const[ar,ac]=hAnchor(h,r,at-1),a=h.c[ar][ac];if(ac+a.cs>at)x=a}
+ if(x){if(!done.has(x)){x.cs++;done.add(x)}row.splice(at,0,hcell('',{hid:1}))}else row.splice(at,0,hcell(''))});const tot=h.w.reduce((a,b)=>a+b,0)/h.w.length;h.w.splice(at,0,tot)}
+function hDelCol(h,c){if(h.c[0].length<2)return false;const seen=new Set();h.c.forEach((row,r)=>{const x=row[c];if(x.hid){const[ar,ac]=hAnchor(h,r,c);if(ac<c){const a=h.c[ar][ac];if(!seen.has(a)){a.cs--;seen.add(a)}}}else if(x.cs>1){Object.assign(row[c+1],{...x,cs:x.cs-1,hid:0})}row.splice(c,1)});h.w.splice(c,1);return true}
+function hMerge(h,r,c,dir){const n=h.c[0].length,m=h.c.length,a=h.c[r][c];let br,bc;
+ if(dir=='l'){br=r;bc=c+a.cs;if(bc>=n)return 0}else if(dir=='r'){br=r;bc=c-1;if(bc<0)return 0}else if(dir=='d'){br=r+a.rs;bc=c;if(br>=m)return 0}else{br=r-1;bc=c;if(br<0)return 0}
+ [br,bc]=hAnchor(h,br,bc);const b=h.c[br][bc];
+ if(dir=='l'||dir=='r'){if(br!=r||b.rs!=a.rs)return 0}else if(bc!=c||b.cs!=a.cs)return 0;
+ const f=(dir=='l'||dir=='d')?a:b,s=f===a?b:a,fr=f===a?r:br,fc=f===a?c:bc;
+ if(dir=='l'||dir=='r')f.cs+=s.cs;else f.rs+=s.rs;f.t=[f.t,s.t].filter(Boolean).join(' ');s.hid=1;s.t='';s.cs=s.rs=1;HS=[fr,fc];return 1}
+function hSplit(h,r,c,mode){const[ar,ac]=hAnchor(h,r,c),a=h.c[ar][ac];
+ if(a.cs>1||a.rs>1){for(let i=ar;i<ar+a.rs;i++)for(let j=ac;j<ac+a.cs;j++)if(i!=ar||j!=ac)h.c[i][j]=hcell('',{a:a.a,b:a.b,z:a.z});a.cs=a.rs=1;HS=[ar,ac];return 1}
+ if(mode=='c'){const done=new Set();h.c.forEach((row,i)=>{if(i==ar){row.splice(ac+1,0,hcell('',{a:a.a,b:a.b,z:a.z}))}else{const[xr,xc]=hAnchor(h,i,ac),x=h.c[xr][xc];if(!done.has(x)){x.cs++;done.add(x)}row.splice(ac+1,0,hcell('',{hid:1}))}});const w=h.w[ac]/2;h.w[ac]=w;h.w.splice(ac+1,0,w)}
+ else{const n=h.c[0].length,done=new Set(),row=[];for(let j=0;j<n;j++){if(j==ac){row.push(hcell('',{a:a.a,b:a.b,z:a.z}))}else{const[xr,xc]=hAnchor(h,ar,j),x=h.c[xr][xc];if(!done.has(x)){x.rs++;done.add(x)}row.push(hcell('',{hid:1}))}}h.c.splice(ar+1,0,row);h.h.splice(ar+1,0,0)}
+ return 1}
+function hdTemplate(){const d='……………',R=(t,o)=>hcell(t,{a:'r',...o}),H=hcell('بسمه تعالی',{cs:4,b:1,z:14}),hid=()=>hcell('',{hid:1});
+ return{on:true,bd:true,w:[25,25,25,25],h:[0,0,0],c:[[H,hid(),hid(),hid()],[R('نام آزمون: '+(ex.title||d)),R('نام و نام خانوادگی: '+d),R('کلاس: '+d),R('تاریخ: '+d)],[R('مدت: '+d+' دقیقه'),R('نام دبیر: '+d),R('تعداد سؤال: '+d),R('نمره: '+d+' از ۲۰')]]}}
+function openHd(){HD=clone(ex.hd&&ex.hd.c&&ex.hd.c.length?ex.hd:hdTemplate());HD.on=true;HS=[0,0];
+ showM('<h3>سربرگ برگه</h3><small>روی هر خانه بزن تا انتخاب شود؛ متن و تنظیم‌هایش را پایین عوض کن.</small><div class="paper hdp" id="hdt"></div><div id="hdc"></div><div class="ft"><button class="p" data-hx="ok">ثبت سربرگ</button><button data-hx="cancel">انصراف</button></div>');hdDraw()}
+function hdTab(){const t=$('#hdt');if(t)t.innerHTML=hdrHtml(HD,true)}
+function hdDraw(){hdTab();const[r,c]=HS,x=HD.c[r][c],tot=HD.w.reduce((a,b)=>a+b,0)||1,wp=Math.round(HD.w[c]/tot*100),B=(k,l,p)=>`<button data-hx="${k}" class="${p?'p':''}">${l}</button>`;
+ $('#hdc').innerHTML=`<label>متن خانه‌ی انتخاب‌شده (برای چند خط، Enter بزن)</label><textarea id="hd_tx" rows="3" style="width:100%;background:var(--bg);color:inherit;border:1px solid var(--ln);border-radius:10px;padding:8px">${esc(x.t)}</textarea>
+ <div class="r">${B('dots','…… نقطه‌چین')}</div>
+ <div class="r" style="align-items:center"><b>تراز:</b>${B('al:r','راست‌چین',x.a=='r')}${B('al:c','وسط‌چین',x.a=='c')}${B('al:l','چپ‌چین',x.a=='l')}${B('bold','<b>B</b>',x.b)}<select id="hd_z">${[0,9,10,11,12,13,14,16,18,20].map(v=>`<option value="${v}" ${(x.z||0)==v?'selected':''}>${v?fa(v)+' پوینت':'اندازه‌ی خودکار'}</option>`).join('')}</select><label style="margin:0"><input type="checkbox" id="hd_all"> اعمال روی همه‌ی خانه‌ها</label></div>
+ <div class="r" style="align-items:center"><b>ردیف:</b>${B('rowa','＋ بالا')}${B('rowb','＋ پایین')}${B('rowd','－ حذف')}<b>ستون:</b>${B('colr','＋ راست')}${B('coll','＋ چپ')}${B('cold','－ حذف')}</div>
+ <div class="r" style="align-items:center"><b>ادغام با:</b>${B('mr','راست')}${B('ml','چپ')}${B('mu','بالا')}${B('md','پایین')}</div>
+ <div class="r" style="align-items:center"><b>تقسیم:</b>${B('sp','جدا کردن ادغام')}${B('sc','۲ ستون')}${B('sr','۲ ردیف')}</div>
+ <div class="r" style="align-items:center"><label>عرض ستون:</label><input type="range" id="hd_w" min="5" max="90" value="${wp}" style="flex:1;accent-color:var(--ac)"><b id="hd_wv">${fa(wp)}٪</b></div>
+ <div class="r" style="align-items:center"><label>ارتفاع ردیف:</label><input type="range" id="hd_h" min="0" max="60" value="${HD.h[r]||0}" style="flex:1;accent-color:var(--ac)"><b id="hd_hv">${HD.h[r]?fa(HD.h[r])+' میلی‌متر':'خودکار'}</b></div>
+ <div class="r" style="align-items:center"><label><input type="checkbox" id="hd_bd" ${HD.bd!==false?'checked':''}> خط‌های جدول سربرگ چاپ شود</label>${B('tpl','نمونه‌ی آماده')}${B('clr','پاک کردن همه')}</div>`}
+$('#md').addEventListener('click',e=>{const t=e.target,td=t.closest&&t.closest('#hdt td');if(td&&HD){HS=[+td.dataset.r,+td.dataset.c];hdDraw();return}
+ const b=t.closest('button');if(!b||!b.dataset.hx||!HD)return;const k=b.dataset.hx,[r,c]=HS;let ok=1;const all=$('#hd_all')&&$('#hd_all').checked,anchors=()=>{const o=[];HD.c.forEach(row=>row.forEach(x=>{if(!x.hid)o.push(x)}));return o},cur=HD.c[r][c];
+ if(k=='ok'){ex.hd=HD;persist();hideM();HD=null;render();return}
+ if(k=='cancel'){hideM();HD=null;return}
+ if(k.startsWith('al:'))(all?anchors():[cur]).forEach(x=>x.a=k[3]);
+ else if(k=='bold'){const v=cur.b?0:1;(all?anchors():[cur]).forEach(x=>x.b=v)}
+ else if(k=='dots'){cur.t+=(cur.t&&!/\s$/.test(cur.t)?' ':'')+'……………'}
+ else if(k=='rowa'){hAddRow(HD,r);HS=[r,c]}else if(k=='rowb'){hAddRow(HD,r+cur.rs);HS=[r,c]}
+ else if(k=='rowd'){if(!hDelRow(HD,r))toast('ردیف آخر را نمی‌شود حذف کرد');HS=[Math.min(r,HD.c.length-1),c]}
+ else if(k=='colr'){hAddCol(HD,c);HS=[r,c+1]}else if(k=='coll'){hAddCol(HD,c+cur.cs)}
+ else if(k=='cold'){if(!hDelCol(HD,c))toast('ستون آخر را نمی‌شود حذف کرد');HS=[r,Math.min(c,HD.c[0].length-1)]}
+ else if(k[0]=='m'&&k.length==2){if(!hMerge(HD,r,c,k[1])){toast('با این خانه نمی‌شود ادغام کرد (خانه‌ی کناری هم‌اندازه نیست)');ok=0}}
+ else if(k=='sp'){if(cur.cs==1&&cur.rs==1){toast('این خانه ادغام‌شده نیست؛ برای تقسیم «۲ ستون» یا «۲ ردیف» را بزن');ok=0}else hSplit(HD,r,c)}
+ else if(k=='sc'||k=='sr'){if(cur.cs>1||cur.rs>1){toast('اول «جدا کردن ادغام» را بزن');ok=0}else hSplit(HD,r,c,k=='sc'?'c':'r')}
+ else if(k=='tpl')HD=Object.assign(hdTemplate(),{bd:HD.bd}),HS=[0,0];
+ else if(k=='clr'){if(confirm('همه‌ی خانه‌های سربرگ پاک شود؟')){HD={on:true,bd:HD.bd,w:[100],h:[0],c:[[hcell('',{})]]};HS=[0,0]}else ok=0}
+ if(ok){HS=[clampN(HS[0],0,HD.c.length-1),clampN(HS[1],0,HD.c[0].length-1)];hdDraw()}});
+$('#md').addEventListener('input',e=>{const t=e.target;if(!HD||!t)return;const[r,c]=HS;
+ if(t.id=='hd_tx'){HD.c[r][c].t=t.value;hdTab()}
+ else if(t.id=='hd_w'){const tot=HD.w.reduce((a,b)=>a+b,0),rest=tot-HD.w[c],f=clampN(+t.value,5,90)/100;HD.w[c]=f*rest/(1-f)||HD.w[c];$('#hd_wv').textContent=fa(t.value)+'٪';hdTab()}
+ else if(t.id=='hd_h'){HD.h[r]=+t.value;$('#hd_hv').textContent=+t.value?fa(t.value)+' میلی‌متر':'خودکار';hdTab()}});
+$('#md').addEventListener('change',e=>{const t=e.target;if(!HD||!t)return;const[r,c]=HS;
+ if(t.id=='hd_z'){const all=$('#hd_all')&&$('#hd_all').checked;(all?HD.c.flat().filter(x=>!x.hid):[HD.c[r][c]]).forEach(x=>x.z=+t.value);hdTab()}
+ else if(t.id=='hd_bd'){HD.bd=t.checked}});
+// ---- import student names from PDF / text
+const roTools=()=>`<div class="r"><label class="b" style="border-color:var(--ac)">📄 افزودن از فایل PDF یا متنی<input type="file" id="ro_f" accept=".pdf,.txt,.csv,application/pdf,text/plain" hidden></label><button data-x="rorw">↔ برعکس‌کردن ترتیب کلمه‌ها</button><button data-x="rorl">⇄ برعکس‌کردن حروف کلمه‌ها</button></div><small>اسم‌ها از PDF خوانده و همین‌جا نشان داده می‌شوند؛ قبل از «ذخیره» بررسی و اصلاح کن. اگر اسم‌ها جابه‌جا یا وارونه بودند از دو دکمه‌ی بالا استفاده کن. PDFهای اسکن‌شده (عکس) خوانده نمی‌شوند.</small>`;
+async function loadPdfJs(){if(window.__pdfjs)return window.__pdfjs;const base='https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/legacy/build/',m=await import(base+'pdf.min.mjs'),w=await (await fetch(base+'pdf.worker.min.mjs')).text();m.GlobalWorkerOptions.workerSrc=URL.createObjectURL(new Blob([w],{type:'text/javascript'}));return window.__pdfjs=m}
+const HWD=new Set('ردیف خانوادگی نامخانوادگی شماره توضیحات صفحه امضا دانشآموز دانشآموزان لیست کلاس تاریخ مدرسه دبیرستان پایه نامپدر کدملی رشته جمع کد'.split(' '));
+function cleanNameLine(s,min){const tk=String(s).normalize('NFKC').replace(/ي/g,'ی').replace(/ك/g,'ک').split(/[\s,;،\t|]+/).filter(Boolean);const out=[];for(const w of tk){if(/[0-9۰-۹٠-٩]/.test(w))continue;if(!/[\u0600-\u06FFa-zA-Z]/.test(w))continue;if(HWD.has(w.replace(/[\u200c\s]/g,'')))return'';out.push(w.replace(/^[^\u0600-\u06FFa-zA-Z]+|[^\u0600-\u06FFa-zA-Z\u200c]+$/g,''))}return out.length>=min?out.join(' '):''}
+async function pdfLines(file){const P=await loadPdfJs(),doc=await P.getDocument({data:await file.arrayBuffer()}).promise,lines=[];
+ for(let p=1;p<=doc.numPages;p++){const pg=await doc.getPage(p),tc=await pg.getTextContent(),its=tc.items.filter(i=>i.str&&i.str.trim()).map(i=>({s:i.str.trim(),x:i.transform[4],y:i.transform[5],w:i.width||0,h:i.height||10}));its.sort((a,b)=>b.y-a.y||b.x-a.x);let cur=null;
+  for(const i of its){if(cur&&Math.abs(cur.y-i.y)<4)cur.a.push(i);else{cur={y:i.y,a:[i]};lines.push(cur)}}}
+ return lines.map(l=>{const a=l.a.sort((p,q)=>q.x-p.x);let o='';a.forEach((i,k)=>{if(k){const pv=a[k-1],gap=pv.x-(i.x+i.w);o+=gap<0.2*(pv.h||10)?'':' '}o+=i.s});return o})}
+$('#md').addEventListener('change',async e=>{const t=e.target;if(t.id!='ro_f'||!t.files[0])return;const f=t.files[0];let raw;toast('در حال خواندن فایل…');
+ try{raw=/\.pdf$/i.test(f.name)||f.type=='application/pdf'?await pdfLines(f):(await f.text()).split(/\r?\n/)}catch(err){console.error(err);t.value='';return toast('فایل خوانده نشد؛ اینترنت را بررسی کن یا اسم‌ها را کپی/پیست کن')}
+ t.value='';let L=raw.map(x=>cleanNameLine(x,2)).filter(Boolean);if(!L.length)L=raw.map(x=>cleanNameLine(x,1)).filter(Boolean);
+ if(!L.length)return toast('اسمی در فایل پیدا نشد (شاید PDF اسکن/عکس است)');const ta=$('#ro_tx');ta.value=(ta.value.trim()?ta.value.trim()+'\n':'')+L.join('\n');toast(fa(L.length)+' اسم خوانده شد؛ بررسی کن و «ذخیره» را بزن')});
+$('#md').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const x=b.dataset.x,ta=$('#ro_tx');if(!ta||(x!='rorw'&&x!='rorl'))return;
+ ta.value=ta.value.split('\n').map(l=>x=='rorw'?l.trim().split(/\s+/).reverse().join(' '):l.trim().split(/\s+/).map(w=>[...w].reverse().join('')).join(' ')).join('\n')});
+
+
+// ---- several classes for one exam
+const rosIds=o=>Array.isArray(o.rosm)?o.rosm:(o.ros?[o.ros]:[]);
+const rosSelList=o=>rosIds(o||{}).map(id=>ROS().find(x=>x.id==id)).filter(Boolean);
+const rosNames=o=>{const seen=new Set(),out=[];rosSelList(o).forEach(l=>l.names.forEach(n=>{const k=nk(n);if(!seen.has(k)){seen.add(k);out.push(n)}}));return out};
+function rosCard(exm,L){const sel=rosSelList(exm.ol);if(!sel.length)return'';const got=L.map(x=>nk(x.r.name)),all=rosNames(exm.ol),known=all.map(nk),miss=all.filter(n=>!got.includes(nk(n))),extra=L.filter(x=>!known.includes(nk(x.r.name))),multi=sel.length>1;
+ RS.miss=multi?sel.flatMap(l=>l.names.filter(n=>!got.includes(nk(n))).map(n=>n+' ('+l.name+')')):miss;
+ const per=multi?sel.map(l=>{const m=l.names.filter(n=>!got.includes(nk(n)));return `<div style="margin-top:6px"><b>${esc(l.name)}:</b> ${fa(l.names.length-m.length)} از ${fa(l.names.length)} نفر${m.length?' — ارسال نکرده‌اند: '+m.map(esc).join('، '):' ✅'}</div>`}).join(''):'';
+ return `<div class="card"><h3>حضور و غیاب — ${sel.map(l=>esc(l.name)).join(' + ')}</h3><p>${fa(all.length-miss.length)} از ${fa(all.length)} نفر نتیجه داده‌اند.</p>${multi?per+(miss.length?'<div class="r"><button data-a="romiss">📋 کپی فهرست همه‌ی غایب‌ها</button></div>':'<b style="color:var(--ac)">✅ همه نتیجه داده‌اند</b>'):(miss.length?`<b>ارسال نکرده‌اند (${fa(miss.length)}):</b><div>${miss.map(esc).join('، ')}</div><div class="r"><button data-a="romiss">📋 کپی فهرست</button></div>`:'<b style="color:var(--ac)">✅ همه نتیجه داده‌اند</b>')}${extra.length?`<p style="color:var(--dg)">⚠️ این نام‌ها در لیست نیستند (شاید غلط املایی): ${extra.map(x=>esc(x.r.name)).join('، ')}</p>`:''}</div>`}
+$('#v').addEventListener('change',e=>{const t=e.target;if(!t||!t.dataset||t.dataset.rc===undefined)return;const o=olv(),ids=$$('#ro_chk input[data-rc]:checked').map(i=>i.dataset.rc);o.rosm=ids;o.ros=ids[0]||'';persist()});
+
 (async()=>{const D0=(document.getElementById('examDataEmbed')?.textContent||'').trim()||new URLSearchParams(location.search).get('d')||new URLSearchParams(location.search).get('r');if(D0)return startStudent(D0);db=await idb();exams=await all('exams');bank=await all('bank');exams.forEach(migr);bank.forEach(b=>legacy(b.item));ex=exams.find(e=>e.id==localStorage.ao_cur)||exams[0];if(!ex){newExam();localStorage.ao_blank=ex.id}else render();syncAll(true);navigator.storage?.persist?.();draftPrompt();setTimeout(loadDocx,3000);if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js')})();
 </script></body></html>
